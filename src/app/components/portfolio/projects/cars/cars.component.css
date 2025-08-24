@@ -1,0 +1,24 @@
+.image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 500px;
+  height: 400px;
+  max-height: 400px;
+  min-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.image .item-image{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top center; /* Start at the top */
+    transition: background-position 3s ease;
+}
+
+.image .item-image:hover{
+    background-position: bottom center; /* Scroll to the bottom on hover */
+}

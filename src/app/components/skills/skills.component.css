@@ -1,0 +1,61 @@
+.skills-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.skill-category {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    /* Animation: Slide in on scroll (will need JS for this) */
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* أو flex-start للـ RTL */
+}
+
+.skill-category h3 i {
+    margin-right: 15px; /* أو margin-left للـ RTL */
+    color: var(--accent-color);
+}
+
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-category li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+.skill-category li:hover {
+    background-color: rgba(var(--primary-color), 0.05);
+}

@@ -1,0 +1,80 @@
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem 1rem;
+}
+
+.content-section .normal-image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 800px;
+  height: 400px;
+  max-height: 400px;
+  min-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.content-section .normal-image .normal-item-image{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+
+.content-section .image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 500px;
+  height: 400px;
+  max-height: 400px;
+  min-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.content-section .image .item-image{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top center; /* Start at the top */
+    transition: background-position 3s ease;
+}
+
+
+.content-section .image .item-image:hover{
+    background-position: bottom center; /* Scroll to the bottom on hover */
+}
+
+.content-section .description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex: 1;
+}
+
+.content-section .description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.content-section.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content-section.reverse {
+    flex-direction: column;
+  }
+}

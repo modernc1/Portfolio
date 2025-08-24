@@ -1,0 +1,17 @@
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="portfolio-grid">
+            <div *ngFor="let project of projectService.projects()" class="portfolio-item">
+              <div class="item-image" [style.backgroundImage]="'url(' + project.imageUrl + ')'"></div>
+
+              <!-- <img style="object-position: top;" [src]="project.imageUrl ?? ''" alt="G-Store"> -->
+              <div class="overlay">
+                  <h3>{{project.title}}</h3>
+                  <!-- <p>E-Commerce Website for Shoes</p> -->
+                  <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="view-project-btn">See Details<i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
