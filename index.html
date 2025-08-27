@@ -17,15 +17,15 @@
             </div>
             <ul class="nav-links">
               <div class="theme-toggle-container">
-              <button id="themeToggle" class="theme-toggle">
-                <span class="icon sun">☀️</span>
-                <span class="icon moon">🌙</span>
-              </button>
-            </div>
-                <li><a href="/#about">Who am I</a></li>
-                <li><a href="/#skills">Skills</a></li>
-                <li><a href="/#portfolio">Projects</a></li>
-                <li><a href="/#contact">Contact me</a></li>
+                <button id="themeToggle" class="theme-toggle">
+                  <span class="icon sun">☀️</span>
+                  <span class="icon moon">🌙</span>
+                </button>
+              </div>
+                <li><a href="#about">Who am I</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact me</a></li>
+                <li><a href="#portfolio">Projects</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -38,8 +38,8 @@
       <div class="hero-content">
           <h1>Welcome</h1>
           <p class="typewriter">Full Stack Developer (.Net & Angular)</p>
-          <a href="/#portfolio" class="btn primary-btn">Explore projects</a>
-          <a href="/#contact" class="btn secondary-btn">Contact me</a>
+          <a href="#portfolio" class="btn primary-btn">Explore projects</a>
+          <a href="#contact" class="btn secondary-btn">Contact me</a>
       </div>
       <!-- <div class="hero-image">
           <img src="img/your-avatar.png" alt="صورتي الشخصية">
@@ -48,87 +48,6 @@
 
   <app-root></app-root>
 
-  <!-- <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Close mobile nav after clicking a link
-                if (navLinks.classList.contains('nav-active')) {
-                    navLinks.classList.remove('nav-active');
-                    burger.classList.remove('toggle');
-                }
-            });
-        });
-
-        // Mobile Navigation Toggle
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-
-        if (burger && navLinks) {
-            burger.addEventListener('click', () => {
-                navLinks.classList.toggle('nav-active');
-                burger.classList.toggle('toggle'); // for burger animation
-            });
-        }
-
-        // Intersection Observer for scroll animations
-        // لتفعيل الـ animations عند ظهور العناصر في viewport
-        const faders = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .skill-category, .portfolio-item, .contact-form'); // أضف المزيد من العناصر هنا
-
-        const appearOptions = {
-            threshold: 0.3, // تفعيل الـ animation عندما يكون 30% من العنصر مرئياً
-            rootMargin: "0px 0px -100px 0px" // لتفعيلها قبل الوصول إلى آخر الشاشة بقليل
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) translateX(0)';
-                    // يمكنك إضافة كلاس هنا لتشغيل الـ animation المحددة
-                    if (entry.target.classList.contains('skill-category')) {
-                        entry.target.style.animation = 'slideInLeft 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1)';
-                    }
-                    // مثال: إذا كان هناك animation أخرى
-                    // else if (entry.target.classList.contains('portfolio-item')) {
-                    //     entry.target.style.animation = 'fadeInScaleUp 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1)';
-                    // }
-                    appearOnScroll.unobserve(entry.target); // إيقاف المراقبة بعد تفعيل الـ animation
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            fader.style.transition = 'none'; // تعطيل الـ transition المباشر لتفعيل الـ animation
-            appearOnScroll.observe(fader);
-        });
-
-        // Adjusting for hero section initial animation
-        const heroContent = document.querySelector('.hero-content');
-        const heroImage = document.querySelector('.hero-image');
-
-        if (heroContent) {
-            heroContent.style.opacity = '1';
-            heroContent.style.transform = 'translateY(0)';
-        }
-        if (heroImage) {
-            heroImage.style.opacity = '1';
-            heroImage.style.transform = 'scale(1)';
-        }
-    });
-  </script> -->
-    <!-- <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> -->
-
-  <script src="assets/js/script.js" type="text/javascript"></script>
-  <script src="assets/js/finisher-header.es5.min.js" type="text/javascript"></script>
   <script type="text/javascript">
      new FinisherHeader({
       "count": 3,
@@ -166,6 +85,7 @@
       ]
       });
   </script>
+
   <script>
     const body = document.documentElement;
     const toggleBtn = document.getElementById("themeToggle");
@@ -292,5 +212,5 @@
       }
     });
   </script>
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="scripts-7SEEZB2C.js" defer></script><script src="main-L6DY4IIU.js" type="module"></script></body>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="scripts-JUDARS6P.js" defer></script><script src="main-L6DY4IIU.js" type="module"></script></body>
 </html>
