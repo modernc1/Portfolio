@@ -13,19 +13,19 @@
   <header class="main-header">
         <nav class="navbar">
             <div class="logo">
+                <div class="theme-toggle-container">
+                  <button id="themeToggle" class="theme-toggle">
+                    <span class="icon sun">☀️</span>
+                    <span class="icon moon">🌙</span>
+                  </button>
+                </div>
                 <a href="#hero">Mohamed</a>
             </div>
             <ul class="nav-links">
-              <div class="theme-toggle-container">
-              <button id="themeToggle" class="theme-toggle">
-                <span class="icon sun">☀️</span>
-                <span class="icon moon">🌙</span>
-              </button>
-            </div>
-                <li><a href="/#about">Who am I</a></li>
-                <li><a href="/#skills">Skills</a></li>
-                <li><a href="/#portfolio">Projects</a></li>
-                <li><a href="/#contact">Contact me</a></li>
+                <li><a href="/Portfolio/#about">Who am I</a></li>
+                <li><a href="/Portfolio/#skills">Skills</a></li>
+                <li><a href="/Portfolio/#contact">Contact me</a></li>
+                <li><a href="/Portfolio/#portfolio">Projects</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -34,12 +34,12 @@
             </div>
         </nav>
     </header>
-  <section id="hero" class="hero-section finisher-header">
+  <section id="hero" class="hero-section ">
       <div class="hero-content">
           <h1>Welcome</h1>
           <p class="typewriter">Full Stack Developer (.Net & Angular)</p>
-          <a href="/#portfolio" class="btn primary-btn">Explore projects</a>
-          <a href="/#contact" class="btn secondary-btn">Contact me</a>
+          <a href="#portfolio" class="btn primary-btn">Explore projects</a>
+          <a href="#contact" class="btn secondary-btn">Contact me</a>
       </div>
       <!-- <div class="hero-image">
           <img src="img/your-avatar.png" alt="صورتي الشخصية">
@@ -48,11 +48,10 @@
 
   <app-root></app-root>
 
-  <script src="assets/js/script.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> -->
-  <script src="assets/js/finisher-header.es5.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    new FinisherHeader({
+  <!-- <script src="assets/js/finisher-header.es5.min.js" type="text/javascript"></script> -->
+
+  <!-- <script type="text/javascript">
+     new FinisherHeader({
       "count": 3,
       "size": {
           "min": 1100,
@@ -87,50 +86,51 @@
           "c"
       ]
       });
-  </script>
-  <script>
+  </script> -->
+
+  <script type="text/javascript">
     const body = document.documentElement;
     const toggleBtn = document.getElementById("themeToggle");
 
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-theme");
       toggleBtn.classList.add("dark");
-      new FinisherHeader({
-        "count": 4,
-        "size": {
-            "min": 1100,
-            "max": 1300,
-            "pulse": 0
-        },
-        "speed": {
-            "x": {
-            "min": 0.1,
-            "max": 0.3
-            },
-            "y": {
-            "min": 0.1,
-            "max": 0.3
-            }
-        },
-        "colors": {
-          "background": "#6200ff",
-          "particles": [
-            "#05005d",
-            "#000000",
-            "#000000",
-            "#000000"
-          ]
-        },
-        "blending": "overlay",
-        "opacity": {
-            "center": 1,
-            "edge": 0.1
-        },
-        "skew": 0,
-        "shapes": [
-            "c"
-        ]
-        });
+      // new FinisherHeader({
+      //   "count": 4,
+      //   "size": {
+      //       "min": 1100,
+      //       "max": 1300,
+      //       "pulse": 0
+      //   },
+      //   "speed": {
+      //       "x": {
+      //       "min": 0.1,
+      //       "max": 0.3
+      //       },
+      //       "y": {
+      //       "min": 0.1,
+      //       "max": 0.3
+      //       }
+      //   },
+      //   "colors": {
+      //     "background": "#6200ff",
+      //     "particles": [
+      //       "#05005d",
+      //       "#000000",
+      //       "#000000",
+      //       "#000000"
+      //     ]
+      //   },
+      //   "blending": "overlay",
+      //   "opacity": {
+      //       "center": 1,
+      //       "edge": 0.1
+      //   },
+      //   "skew": 0,
+      //   "shapes": [
+      //       "c"
+      //   ]
+      //   });
     }
     toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark-theme");
@@ -138,79 +138,79 @@
     localStorage.setItem('theme', 'dark')
 
     if(body.classList.contains('dark-theme')){
-      new FinisherHeader({
-        "count": 4,
-        "size": {
-            "min": 1100,
-            "max": 1300,
-            "pulse": 0
-        },
-        "speed": {
-            "x": {
-            "min": 0.1,
-            "max": 0.3
-            },
-            "y": {
-            "min": 0.1,
-            "max": 0.3
-            }
-        },
-        "colors": {
-          "background": "#6200ff",
-          "particles": [
-            "#05005d",
-            "#000000",
-            "#000000",
-            "#000000"
-          ]
-        },
-        "blending": "overlay",
-        "opacity": {
-            "center": 1,
-            "edge": 0.1
-        },
-        "skew": 0,
-        "shapes": [
-            "c"
-        ]
-        });
+      // new FinisherHeader({
+      //   "count": 4,
+      //   "size": {
+      //       "min": 1100,
+      //       "max": 1300,
+      //       "pulse": 0
+      //   },
+      //   "speed": {
+      //       "x": {
+      //       "min": 0.1,
+      //       "max": 0.3
+      //       },
+      //       "y": {
+      //       "min": 0.1,
+      //       "max": 0.3
+      //       }
+      //   },
+      //   "colors": {
+      //     "background": "#6200ff",
+      //     "particles": [
+      //       "#05005d",
+      //       "#000000",
+      //       "#000000",
+      //       "#000000"
+      //     ]
+      //   },
+      //   "blending": "overlay",
+      //   "opacity": {
+      //       "center": 1,
+      //       "edge": 0.1
+      //   },
+      //   "skew": 0,
+      //   "shapes": [
+      //       "c"
+      //   ]
+      //   });
       }else{
         localStorage.setItem('theme', 'light')
-        new FinisherHeader({
-        "count": 4,
-        "size": {
-            "min": 1100,
-            "max": 1300,
-            "pulse": 0
-        },
-        "speed": {
-            "x": {
-            "min": 0.1,
-            "max": 0.3
-            },
-            "y": {
-            "min": 0.1,
-            "max": 0.3
-            }
-        },
-        "colors": {
-            "background": "#4f9dff",
-            "particles": [
-            "#beedff",
-            "#c4eaff",
-            "#abeeff"
-            ]
-        },
-        "blending": "overlay",
-        "opacity": {
-            "center": 1,
-            "edge": 0.1
-        },
-        "skew": 0,
-        "shapes": [
-            "c"
-        ]
-        });
+        // new FinisherHeader({
+        // "count": 4,
+        // "size": {
+        //     "min": 1100,
+        //     "max": 1300,
+        //     "pulse": 0
+        // },
+        // "speed": {
+        //     "x": {
+        //     "min": 0.1,
+        //     "max": 0.3
+        //     },
+        //     "y": {
+        //     "min": 0.1,
+        //     "max": 0.3
+        //     }
+        // },
+        // "colors": {
+        //     "background": "#4f9dff",
+        //     "particles": [
+        //     "#beedff",
+        //     "#c4eaff",
+        //     "#abeeff"
+        //     ]
+        // },
+        // "blending": "overlay",
+        // "opacity": {
+        //     "center": 1,
+        //     "edge": 0.1
+        // },
+        // "skew": 0,
+        // "shapes": [
+        //     "c"
+        // ]
+        // });
       }
     });
   </script>

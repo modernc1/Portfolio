@@ -30,7 +30,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/script.js"
+            ],
+            "baseHref": "/Portfolio/"
           },
           "configurations": {
             "production": {

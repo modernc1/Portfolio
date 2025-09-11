@@ -20,31 +20,31 @@ export class ProjectService {
     {
       id: 2,
       title: 'Responsive Real Estate Web Application',
-      imageUrl: '/assets/img/real-estate/real-estate-main-img.jpeg'
+      imageUrl: 'assets/img/real-estate/real-estate-main-img.jpeg'
       // content: RealEstateComponent
     },
     {
       id: 3,
       title: 'Responsive Shoes E-Commerce Web-Application',
-      imageUrl: '/assets/img/shoes-store/shoes-store-main-img.jpeg'
+      imageUrl: 'assets/img/shoes-store/shoes-store-main-img.jpeg'
       // content: ShoeStoreComponent
     },
     {
       id: 4,
       title: 'Responsive Electronics E-Commerce Web-Application',
-      imageUrl: '/assets/img/e-store/e-storemain-image.png'
+      imageUrl: 'assets/img/e-store/e-storemain-image.png'
       // content: EStoreComponent
     },
     {
       id: 5,
       title: 'Responsive Medical Blog Web-Application',
-      imageUrl: '/assets/img/medical-blog/medical-blog-main-img.png'
+      imageUrl: 'assets/img/medical-blog/medical-blog-main-img.png'
       // content: MedicalBlogComponent
     },
     {
       id: 6,
       title: 'Car Rental Landing Page',
-      imageUrl: '/assets/img/cars/Car_site_main_img.jpeg'
+      imageUrl: 'assets/img/cars/Car_site_main_img.jpeg'
       // content: CarsComponent
     }
   ])

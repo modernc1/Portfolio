@@ -12,7 +12,7 @@
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
@@ -83,4 +83,12 @@
 
 .view-project-btn:hover {
     background-color: darken(var(--accent-color), 50%);
+}
+
+@media(max-width: 500px) {
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
 }

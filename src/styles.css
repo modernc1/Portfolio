@@ -1,30 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-/* الأنماط الأساسية والمتغيرات */
 :root {
-    --primary-color: #007bff; /* أزرق مشرق */
-    --secondary-color: #6c757d; /* رمادي */
-    --accent-color: #22bf11; /* أخضر */
-    --bg-light: #f8f9fa; /* خلفية فاتحة جداً */
-    --bg-dark: #343a40; /* خلفية داكنة */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #22bf11;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
     --text-color: #333;
     --white: #fff;
-    --font-family-primary: 'Cairo', sans-serif; /* استخدم خط عربي عصري */
+    --font-family-primary: 'Cairo', sans-serif;
     --transition-speed: 0.3s ease-in-out;
+    --second-bg-gradient: rgb(171, 220, 255);
 }
 
 :root.dark-theme{
-  --primary-color: #0d6efd; /* أزرق داكن مناسب للدرك ثيم */
-  --secondary-color: #adb5bd; /* رمادي فاتح للتباين */
-  --accent-color: #17a34a; /* أخضر داكن أنيق */
-  --bg-light: #212529; /* خلفية داكنة أساسية */
-  --bg-dark: #121416; /* خلفية داكنة جداً */
-  --text-color: #e9ecef; /* نص فاتح للقراءة */
-  --white: #000000; /* أبيض مائل للرمادي */
-  --font-family-primary: 'Cairo', sans-serif; /* نفس الخط */
-  --transition-speed: 0.3s ease-in-out; /* نفس السرعة */
+  --primary-color: #0d6efd;
+  --secondary-color: #adb5bd;
+  --accent-color: #17a34a;
+  --bg-light: #212529;
+  --bg-dark: #121416;
+  --text-color: #e9ecef;
+  --white: #000000;
+  --font-family-primary: 'Cairo', sans-serif;
+  --transition-speed: 0.3s ease-in-out;
+  --second-bg-gradient: rgb(30, 0, 100);
 }
 
-/* إعادة ضبط المتصفح (Reset CSS) */
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* تصفح سلس عند النقر على الروابط */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
-    overflow-x: hidden; /* لمنع ظهور شريط التمرير الأفقي غير المرغوب فيه */
+    overflow-x: hidden;
 }
 
 
@@ -50,7 +50,6 @@ body {
     padding: 0 20px;
 }
 
-/* الأنماط العامة للعناصر */
 h1, h2, h3 {
     margin-bottom: 20px;
     color: var(--text-color);
@@ -88,8 +87,8 @@ a:hover {
 }
 
 .primary-btn:hover {
-    background-color: darken(var(--primary-color), 10%); /* استخدام SCSS function أو لون أغمق يدوي */
-    transform: translateY(-3px); /* تأثير رفع بسيط */
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-3px);
 }
 
 .secondary-btn {
@@ -107,7 +106,7 @@ a:hover {
 .main-header {
     background-color: var(--white);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky; /* لجعل الهيدر ثابتاً عند التمرير */
+    position: sticky;
     top: 0;
     z-index: 1000;
     padding: 15px 0;
@@ -122,6 +121,11 @@ a:hover {
     padding: 0 20px;
 }
 
+.logo{
+  display: flex;
+  gap: 20px;
+}
+
 .logo a {
     font-size: 1.8rem;
     font-weight: bold;
@@ -134,7 +138,7 @@ a:hover {
 }
 
 .nav-links li {
-    margin-left: 30px; /* أو margin-right للـ RTL */
+    margin-left: 30px;
 }
 
 .nav-links a {
@@ -144,7 +148,6 @@ a:hover {
     color: var(--text-color);
 }
 
-/* Animation: Underline effect on hover */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -152,7 +155,7 @@ a:hover {
     height: 2px;
     background: var(--primary-color);
     bottom: 0;
-    left: 0; /* أو right: 0; للـ RTL */
+    left: 0;
     transition: width var(--transition-speed);
 }
 
@@ -160,9 +163,8 @@ a:hover {
     width: 100%;
 }
 
-/* Burger Menu (for mobile) */
 .burger {
-    display: none; /* مخفي افتراضياً على سطح المكتب */
+    display: none;
     cursor: pointer;
     flex-direction: column;
     justify-content: space-around;
@@ -183,21 +185,55 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 100px 0;
-    min-height: calc(100vh - 80px); /* 80px تقريباً ارتفاع الهيدر */
-    /* background: linear-gradient(to right, rgb(205, 215, 255), var(--white)); */
+    min-height: calc(100vh - 80px);
+    background: linear-gradient(to right, var(--second-bg-gradient), var(--white));
     position: relative;
     overflow: hidden;
+}
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    z-index: 0;
+}
+
+
+.hero-section::before {
+    background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                      radial-gradient(3px 3px at 120px 80px, #fff, transparent),
+                      radial-gradient(1px 1px at 60px 150px, #fff, transparent),
+                      radial-gradient(3px 3px at 180px 40px, #fff, transparent);
+    animation: moveStars 60s linear infinite;
+}
+
+/* Larger, slower stars */
+.hero-section::after {
+
+    background-image: radial-gradient(2px 2px at 50px 100px, #fff, transparent),
+                      radial-gradient(2px 2px at 170px 200px, #fff, transparent),
+                      radial-gradient(1px 1px at 100px 50px, #fff, transparent),
+                      radial-gradient(2px 2px at 200px 150px, #fff, transparent);
+    animation: moveStars 120s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to   { background-position: -100px 4000px; }
 }
 
 .hero-content {
     text-align: center;
     max-width: 700px;
-    margin-right: 50px; /* أو margin-left للـ RTL */
-    /* Animation: Fade in and slide up */
+    margin-right: 50px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInSlideUp 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
     animation-delay: 0.5s;
+    z-index: 900;
 }
 
 .hero-content h1 {
@@ -210,22 +246,20 @@ a:hover {
     font-size: 1.4rem;
     color: var(--secondary-color);
     margin-bottom: 40px;
-    min-height: 2.8rem; /* للحفاظ على ارتفاع السطر أثناء الـ typewriter effect */
+    min-height: 2.8rem;
 }
 
-/* Typewriter Effect (for the slogan) */
 .typewriter {
-    overflow: hidden; /* يضمن إخفاء النص قبل ظهوره */
-    border-right: .15em solid var(--primary-color); /* مؤشر الكتابة */
-    white-space: nowrap; /* يمنع التفاف النص */
+    overflow: hidden;
+    border-right: .15em solid var(--primary-color);
+    white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .05em; /* تباعد الحروف */
+    letter-spacing: .05em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-    animation-fill-mode: forwards; /* للحفاظ على الحالة النهائية للـ animation */
-    width: 0; /* يبدأ بعرض صفر */
+    animation-fill-mode: forwards;
+    width: 0;
 }
 
-/* Keyframes for Typewriter */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -238,7 +272,6 @@ a:hover {
 
 .hero-image {
     position: relative;
-    /* Animation: Fade in and scale up */
     opacity: 0;
     transform: scale(0.9);
     animation: fadeInScaleUp 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -247,7 +280,7 @@ a:hover {
 
 .hero-image img {
     max-width: 400px;
-    border-radius: 50%; /* لجعل الصورة دائرية */
+    border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -274,13 +307,6 @@ a:hover {
     }
 }
 
-/* يمكنك إضافة المزيد من الـ keyframes هنا */
-/* مثل: pulse, bounce, rotateIn, etc. */
-
-
-/* ========================================================== */
-/* RESPONSIVENESS (Media Queries) */
-/* ========================================================== */
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
@@ -289,29 +315,30 @@ a:hover {
 
     .nav-links {
         flex-direction: column;
-        width: 100%;
+        width: 0%;
         text-align: center;
         background-color: var(--white);
         position: absolute;
-        top: 80px; /* بعد الهيدر */
-        left: 0;
-        transform: translateX(100%); /* مخفية افتراضياً */
-        transition: transform 0.5s ease-in-out;
+        top: 80px;
+        right: 0;
+        transform: translateX(100%);
+        transition: 0.5s ease-in-out;
         z-index: 999;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
+        overflow: hidden;
     }
 
     .nav-links.nav-active {
-        transform: translateX(0%); /* تظهر عند التفعيل */
+      width: 100%;
+      transform: translateX(0%);
     }
 
     .nav-links li {
         margin: 15px 0;
-        opacity: 0; /* مخفي للتأثير المتتالي */
+        opacity: 0;
     }
 
-    /* Animation: Fade in nav links sequentially */
     .nav-links.nav-active li {
         animation: navLinkFade 0.5s ease forwards;
     }
@@ -324,7 +351,6 @@ a:hover {
         display: flex;
     }
 
-    /* Animation for Burger Menu icon */
     .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -390,7 +416,6 @@ a:hover {
     }
 }
 
-/* Animation for nav links (sequential fade in) */
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -405,7 +430,6 @@ a:hover {
 /* ========================================================== */
 /* CLASSES FOR JAVASCRIPT ANIMATIONS (on scroll) */
 /* ========================================================== */
-/* هذه الكلاسات ستضاف بواسطة JS عندما يصل المستخدم إلى القسم */
 .fade-in-up {
     opacity: 0;
     transform: translateY(20px);
@@ -470,8 +494,7 @@ a:hover {
 }
 
 .theme-toggle {
-  --toggle-size: 50px;
-
+  --toggle-size: 24px;
   width: var(--toggle-size);
   height: var(--toggle-size);
   border-radius: 50%;
@@ -497,10 +520,9 @@ a:hover {
 
 /* Position it responsively (top-right corner) */
 .theme-toggle-container {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Icon fade effect */
@@ -523,3 +545,5 @@ a:hover {
   opacity: 1;
   transform: rotate(0) scale(1);
 }
+
+

@@ -8,5 +8,5 @@ import { DetailsSectionComponent } from '../details-section/details-section.comp
   styleUrl: './cars.component.css'
 })
 export class CarsComponent {
-  image: string = '/assets/img/cars/Car_site_main_img.jpeg'
+  image: string = 'assets/img/cars/Car_site_main_img.jpeg'
 }
