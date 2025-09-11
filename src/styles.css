@@ -108,7 +108,7 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
     padding: 15px 0;
 }
 
@@ -233,7 +233,7 @@ a:hover {
     transform: translateY(20px);
     animation: fadeInSlideUp 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
     animation-delay: 0.5s;
-    z-index: 900;
+    z-index: 5;
 }
 
 .hero-content h1 {
@@ -323,7 +323,7 @@ a:hover {
         right: 0;
         transform: translateX(100%);
         transition: 0.5s ease-in-out;
-        z-index: 999;
+        z-index: 5;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
         overflow: hidden;
@@ -370,6 +370,7 @@ a:hover {
     .hero-content {
         margin-right: 0;
         margin-bottom: 50px;
+        z-index: 5;
     }
 
     .hero-image {
