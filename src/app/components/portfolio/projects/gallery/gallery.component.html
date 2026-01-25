@@ -1,0 +1,18 @@
+<div class="gallery-container">
+  <div class="gallery-grid">
+    <div *ngFor="let img of images" class="gallery-item" (click)="openLightbox(img)">
+      <img [src]="img" alt="Project Screenshot">
+      <div class="gallery-overlay">
+        <i class="bi bi-zoom-in"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" *ngIf="selectedImage" (click)="closeLightbox()">
+    <div class="lightbox-content">
+      <img [src]="selectedImage" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeLightbox()">&times;</button>
+    </div>
+  </div>
+</div>

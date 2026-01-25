@@ -1,29 +1,26 @@
-<div class="header-container">
-  <h1 style="font-size: 36px;">Responsive E-Commerce Shoes Web Application</h1>
-  <a href="https://modernc1.github.io/E-Commerce.G-Store/home" target="_blank" class="open-btn secondary-btn">View Demo</a>
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+    <div class="header-actions">
+      <a href="https://modernc1.github.io/E-Commerce.G-Store/home" target="_blank" class="btn primary-btn">
+        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+      </a>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
 </div>
 
-<app-details-section title="Built with ASP.NET Core (Clean Architecture + MediatR) & Angular."
-description="
-Frontend: Angular 19, TypeScript, Standalone Components, Reactive Forms, Responsive Design<br>
-Backend: ASP.NET Core Web API, Clean Architecture, Entity Framework Core<br>
-Database: SQL Server, Code-First Migrations<br>
-Features: Product Catalog (Shoes), Variations (Sizes & Quantities), Shopping Cart, Search & Filters<br>
-Payments: Payment Gateway Integrations for secure online checkout<br>
-Other: REST APIs Integration, Reusable Components, Modern UI/UX" image="assets/img/shoes-store/shoes-store-main-img.jpeg" [reverse]="false"></app-details-section>
+<div class="project-content">
+  <app-details-section title="Modern E-Commerce Experience"
+  description="
+  <strong>Frontend:</strong> Angular 19, Reactive Forms, Reusable Components<br>
+  <strong>Backend:</strong> ASP.NET Core Web API, Clean Architecture<br>
+  <strong>Features:</strong> Product Variations (Sizes/Colors), Shopping Cart, Tap Payment Integration<br>
+  <strong>UX:</strong> Fully responsive design with modern motion effects"></app-details-section>
 
-<app-details-section title="Advanced filtering and search system (by category, price range, size, etc.)" description=""
-image="assets/img/shoes-store/products-page.jpeg" [reverse]="true"></app-details-section>
+  <app-details-section title="Advanced Discovery" description="Built-in advanced filtering and search system allowing users to find specific products by category, price, size, and more."></app-details-section>
 
-<app-details-section title="Dynamic Reactive Forms to add multiple variations for products" description=""
-image="assets/img/shoes-store/reactive-forms.jpeg" [reverse]="false"></app-details-section>
-
-<app-details-section title="Responsive Cart checkout system." description=""
-image="assets/img/shoes-store/cart.jpeg" [reverse]="true"></app-details-section>
-
-<app-details-section title="Payment gateway integration (Tap payments)" description=""
-image="assets/img/shoes-store/tap-payment-integration.jpeg" [reverse]="false"></app-details-section>
-
-<app-details-section title="Admin panel for managing Products & Categories" description=""
-image="assets/img/shoes-store/content-management.jpeg" [reverse]="true"></app-details-section>
+  <app-details-section title="Secure Checkout" description="Integration with Tap Payments for a safe and professional checkout experience, handling various payment methods seamlessly."></app-details-section>
+</div>
 

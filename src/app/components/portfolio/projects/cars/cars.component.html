@@ -1,8 +1,12 @@
-<div class="header-container">
-  <h1 style="font-size: 36px;">Car Rental Landing page</h1>
-  <!-- <a href="" target="_blank" class="open-btn secondary-btn">View Demo</a> -->
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
 </div>
 
-<app-details-section title="Built with HTML5, CSS3, Javascript"
-description=""
-[image]="image"></app-details-section>
+<div class="project-content">
+  <app-details-section title="Modern Rental Landing Page"
+  description="Built with pure HTML5, CSS3, and Javascript to deliver a high-performance, responsive landing page for car rentals with smooth animations and intuitive navigation."></app-details-section>
+</div>

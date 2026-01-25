@@ -5,6 +5,7 @@ import { ShoeStoreComponent } from './components/portfolio/projects/shoe-store/s
 import { EStoreComponent } from './components/portfolio/projects/e-store/e-store.component';
 import { MedicalBlogComponent } from './components/portfolio/projects/medical-blog/medical-blog.component';
 import { CarsComponent } from './components/portfolio/projects/cars/cars.component';
+import { TimetablesProComponent } from './components/portfolio/projects/timetables-pro/timetables-pro.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 export const routes: Routes = [
@@ -12,6 +13,7 @@ export const routes: Routes = [
 
   { path: 'projects', component: ProjectDetailsComponent, children: [
     // { path: 'Customizable-Responsive-Dashboard'},
+    { path: 'Timetables-Pro-Mobile-Application', component: TimetablesProComponent},
     { path: 'Responsive-Real-Estate-Web-Application', component: RealEstateComponent},
     { path: 'Responsive-Shoes-E-Commerce-Web-Application', component: ShoeStoreComponent},
     { path: 'Responsive-Electronics-E-Commerce-Web-Application', component: EStoreComponent},

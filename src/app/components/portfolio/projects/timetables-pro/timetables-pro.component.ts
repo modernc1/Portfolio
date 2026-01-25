@@ -6,13 +6,13 @@ import { CommonModule } from '@angular/common';
 import { Project } from '../../../project-details/project';
 
 @Component({
-  selector: 'app-medical-blog',
+  selector: 'app-timetables-pro',
   standalone: true,
   imports: [CommonModule, DetailsSectionComponent, ProjectGalleryComponent],
-  templateUrl: './medical-blog.component.html',
-  styleUrl: './medical-blog.component.css'
+  templateUrl: './timetables-pro.component.html',
+  styleUrl: './timetables-pro.component.css'
 })
-export class MedicalBlogComponent {
+export class TimetablesProComponent {
   projectService = inject(ProjectService);
-  project = this.projectService.projects().find((p: Project) => p.id === 6);
+  project = this.projectService.projects().find((p: Project) => p.id === 2);
 }

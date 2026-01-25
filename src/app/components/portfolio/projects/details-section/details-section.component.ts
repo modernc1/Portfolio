@@ -10,7 +10,4 @@ import { Component, Input } from '@angular/core';
 export class DetailsSectionComponent {
     @Input() title: string = '';
     @Input() description: string = '';
-    @Input() image: string = '';
-    @Input() reverse: boolean = false;
-    @Input() longImage: boolean = true;
 }

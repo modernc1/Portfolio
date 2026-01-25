@@ -1,0 +1,43 @@
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+    <div class="header-actions">
+      <a href="https://apps.apple.com/eg/app/timetables-pro/id6757636030" target="_blank" class="btn primary-btn">
+        <i class="bi bi-apple"></i> App Store
+      </a>
+      <button class="btn secondary-btn" style="opacity: 0.7; cursor: not-allowed;">
+        <i class="bi bi-google-play"></i> Play Store (Soon)
+      </button>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
+</div>
+
+<div class="project-content">
+  <app-details-section
+    title="Available on App Store & Soon on Play Store"
+    description="
+    <strong>Platform:</strong> Native Mobile Application (iOS & Android)<br>
+    <strong>Backend Integration:</strong> RESTful APIs, Real-time Notifications<br>
+    <strong>Architecture:</strong> MVVM Pattern, Offline-First Design<br>
+    <strong>Features:</strong> Multi-language Support (Arabic/English), Dual Calendar System (Hijri/Gregorian)<br>
+    <strong>Technology:</strong> Smart Connectivity Check, Local Data Storage, Push Notifications<br>
+    <strong>Quality:</strong> Passed Apple & Google strict acceptance criteria">
+  </app-details-section>
+
+  <app-details-section
+    title="Complete Solution for Teachers"
+    description="Timetables Pro is the mobile interface for the timetablespro.net system, serving thousands of teachers in schools that use the platform for automatic school timetable generation. The app transforms static school schedules into a live interactive environment accessible to teachers anywhere.">
+  </app-details-section>
+
+  <app-details-section
+    title="Automatic Timetable Generation"
+    description="Fully integrated with the web platform engine. Automatically generated timetables are pulled and displayed to teachers with high precision once approved by administration. Seamless synchronization between the school management system and teachers' mobile devices.">
+  </app-details-section>
+
+  <app-details-section
+    title="Substitute Classes System"
+    description="An exclusive software feature that allows administration to assign substitute classes via the platform. Teachers receive instant push notifications on their phones, ensuring smooth workflow within the school and eliminating communication gaps.">
+  </app-details-section>
+</div>

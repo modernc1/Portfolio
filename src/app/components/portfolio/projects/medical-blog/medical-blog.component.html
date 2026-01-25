@@ -1,25 +1,17 @@
-<div class="header-container">
-  <h1 style="font-size: 36px;">Responsive-Medical-Blog-Web-Application</h1>
-  <!-- <a href="" target="_blank" class="open-btn secondary-btn">View Demo</a> -->
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
 </div>
-<app-details-section title="Built with ASP.NET Core (Clean Architecture + MediatR) & Angular."
-description="
-Frontend: Angular 19, TypeScript, CSS Animations, Responsive Design<br>
-Backend: ASP.NET Core (Clean Architecture, MediatR), RESTful APIs<br>
-Database: SQL Server, Entity Framework Core, Migrations<br>
-Authentication & Security: JWT, Role-Based Authorization<br>"
-image="assets/img/medical-blog/medical-blog-main-img.png" [reverse]="false" [longImage]="false"></app-details-section>
 
-<app-details-section title="Role based Authentication (Admin, Readers and Authors)"
-description=""
-image="assets/img/medical-blog/users.png" [reverse]="true" [longImage]="false"></app-details-section>
+<div class="project-content">
+  <app-details-section title="Modern Medical News Hub"
+  description="
+  <strong>Frontend:</strong> Angular 19, TypeScript, CSS Animations, Responsive Design<br>
+  <strong>Backend:</strong> ASP.NET Core (Clean Architecture, MediatR), RESTful APIs<br>
+  <strong>Features:</strong> Content Management with ngx-Markdown, Role-Based Auth"></app-details-section>
 
-<app-details-section title="Content management system" description="Integrated with ngx-Markdown to Decorate text and add images to content"
-image="assets/img/medical-blog/content-management.png" [reverse]="false" [longImage]="false"></app-details-section>
-
-<app-details-section title="Organized simple typography" description=""
-image="assets/img/medical-blog/readable-content.png" [reverse]="true" [longImage]="false">
-</app-details-section>
-
-<app-details-section title="Dynamic Responsive design for phones, tablets & laptops" description=""
-image="assets/img/medical-blog/responsive-phone.png" [reverse]="false" [longImage]="true"></app-details-section>
+  <app-details-section title="CMS & Markdown Support" description="integrated with ngx-Markdown to decorate text and add images to content, allowing authors to create rich, readable medical articles."></app-details-section>
+</div>
