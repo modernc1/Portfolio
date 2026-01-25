@@ -160,7 +160,7 @@ a:hover {
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 800;
     color: var(--primary-color);
     letter-spacing: -0.025em;
@@ -177,8 +177,8 @@ a:hover {
 }
 
 .nav-links a {
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     padding: 0.5rem 0;
     position: relative;
     color: var(--text-color);
@@ -444,6 +444,10 @@ a:hover {
     .nav-links li {
         margin: 1.5rem 0;
         opacity: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
     }
 
     .nav-links.nav-active li {
