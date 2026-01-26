@@ -91,7 +91,20 @@
 }
 
 @media (max-width: 640px) {
+    .skills-section {
+        padding: 4rem 1rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+
     .section-title {
         font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .skills-grid {
+        gap: 1.5rem;
     }
 }

@@ -1,25 +1,18 @@
 <section id="contact" class="contact-section">
     <div class="container">
-        <h2>تواصل معي</h2>
-        <p>هل لديك مشروع في ذهنك؟ دعنا نتحدث!</p>
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind? Let's talk!</p>
         <form class="contact-form" (submit)="onSubmit($event)">
           <input type="text" name="name" placeholder="Name" required>
           <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn primary-btn">Send</button>
+          <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
+          <button type="submit" class="btn primary-btn">Send Message</button>
         </form>
 
-        <!-- <form class="contact-form">
-            <input type="text" placeholder="اسمك الكامل" required>
-            <input type="email" placeholder="بريدك الإلكتروني" required>
-            <textarea placeholder="رسالتك" rows="5" required></textarea>
-            <button type="submit" class="btn primary-btn">إرسال الرسالة</button>
-        </form> -->
-
         <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://github.com/modernc1" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-aymen-172149287" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:mo.hussien.it@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
         </div>
     </div>
 </section>
