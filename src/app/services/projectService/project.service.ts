@@ -62,9 +62,9 @@ export class ProjectService {
       imageUrl: 'assets/img/e-store/e-storemain-image.png',
       gallery: [
         'assets/img/e-store/e-storemain-image.png',
+        'assets/img/e-store/order-details.png',
+        'assets/img/e-store/product-details.png',
         'assets/img/e-store/features.png',
-        'assets/img/e-store/auth.png',
-        'assets/img/e-store/e-store-products.png',
         'assets/img/e-store/cart.png',
         'assets/img/e-store/payment.png'
       ]
@@ -75,9 +75,10 @@ export class ProjectService {
       imageUrl: 'assets/img/medical-blog/medical-blog-main-img.png',
       gallery: [
         'assets/img/medical-blog/medical-blog-main-img.png',
-        'assets/img/medical-blog/blog-listing.png',
+        'assets/img/medical-blog/admin.png',
         'assets/img/medical-blog/details.png',
-        'assets/img/medical-blog/admin.png'
+        'assets/img/medical-blog/content-management.png',
+        'assets/img/medical-blog/responsive-phone.png'
       ]
     },
     {
