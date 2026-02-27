@@ -1,0 +1,47 @@
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+    <div class="header-actions">
+      <a href="https://apps.apple.com/eg/app/resumeai-builder-analyzer/id6758414884" target="_blank" class="btn primary-btn">
+        <i class="bi bi-apple"></i> App Store
+      </a>
+      <button disabled class="btn secondary-btn disabled-btn">
+        <i class="bi bi-google-play"></i> Coming Soon
+      </button>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
+</div>
+
+<div class="project-content">
+  <app-details-section
+    title="Technical Overview"
+    description="
+    <strong>Platform:</strong> Flutter Mobile Application (iOS & Android)<br>
+    <strong>Backend:</strong> Supabase (PostgreSQL, Auth, Edge Functions for AI Analysis)<br>
+    <strong>Architecture:</strong> Provider Pattern, Clean Architecture, Repository Pattern<br>
+    <strong>Features:</strong> 13+ ATS-Optimized Professional Templates, AI-Driven Content Improvement, Secure PDF Storage<br>
+    <strong>Technology:</strong> RevenueCat (Subscriptions), Google Mobile Ads, Low-level PDF Rendering Engine, Google Fonts">
+  </app-details-section>
+
+  <app-details-section
+    title="Complete Resume Solution"
+    description="Resume AI is a comprehensive tool that transforms raw career data into structured, professional resumes. It allows users to manage multiple profiles and generate high-quality documents instantly.">
+  </app-details-section>
+
+  <app-details-section
+    title="AI-Driven Analysis"
+    description="Integrated with AI via Supabase Edge Functions to provide real-time feedback on resume strength and alignment with specific job descriptions.">
+  </app-details-section>
+
+  <app-details-section
+    title="Advanced PDF Generation"
+    description="A custom-built modular PDF engine that supports 13+ professional templates, ensuring maximum ATS compatibility and high-fidelity printing.">
+  </app-details-section>
+
+  <app-details-section
+    title="Scalable Infrastructure"
+    description="Built with a robust backend using Supabase RLS policies and managed subscription cycles via RevenueCat, providing a seamless premium user experience.">
+  </app-details-section>
+</div>

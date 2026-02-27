@@ -6,6 +6,7 @@ import { EStoreComponent } from '../../components/portfolio/projects/e-store/e-s
 import { MedicalBlogComponent } from '../../components/portfolio/projects/medical-blog/medical-blog.component';
 import { CarsComponent } from '../../components/portfolio/projects/cars/cars.component';
 import { TimetablesProComponent } from '../../components/portfolio/projects/timetables-pro/timetables-pro.component';
+import { ResumeAiComponent } from '../../components/portfolio/projects/resume-ai/resume-ai.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,18 @@ import { TimetablesProComponent } from '../../components/portfolio/projects/time
 export class ProjectService {
 
   projects = signal<Project[]>([
-    // {
-    //   id: 1,
-    //   title: 'Customizable Responsive Dashboard',
-    //   // content: RealEstateComponent
-    // },
+    {
+      id: 8,
+      title: 'ResumeAI Builder & Analyzer',
+      imageUrl: 'assets/img/resume-ai/1.png',
+      gallery: [
+        'assets/img/resume-ai/1.png',
+        'assets/img/resume-ai/2.png',
+        'assets/img/resume-ai/3.png',
+        'assets/img/resume-ai/4.png',
+        'assets/img/resume-ai/5.png',
+      ]
+    },
     {
       id: 2,
       title: 'Timetables Pro Mobile Application',
