@@ -32,9 +32,9 @@ export class ProjectService {
     {
       id: 4,
       title: 'Responsive Shoes E-Commerce Web-Application',
-      imageUrl: 'assets/img/shoes-store/shoes-store-main-img.jpeg',
+      imageUrl: 'assets/img/shoes-store/main.jpeg',
       gallery: [
-        'assets/img/shoes-store/shoes-store-main-img.jpeg',
+        'assets/img/shoes-store/main.jpeg',
         'assets/img/shoes-store/dashboard.jpeg',
         'assets/img/shoes-store/whishlist.jpeg',
         'assets/img/shoes-store/shoe-details.jpeg',
