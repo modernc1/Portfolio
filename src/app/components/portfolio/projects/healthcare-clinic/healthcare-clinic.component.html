@@ -1,0 +1,29 @@
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+    <div class="header-actions" *ngIf="project?.liveUrl">
+      <a [href]="project?.liveUrl" target="_blank" class="open-btn">
+        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+      </a>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
+</div>
+
+<div class="project-content">
+  <app-details-section title="Rebranding Engine for Healthcare Providers"
+  description="A professional-grade, highly-customizable Angular & Bootstrap 5 landing page designed to be rebranded in minutes. This project is more than just a website; it’s a rebranding engine built for developers and agencies who need to deploy multiple unique clinic sites rapidly."></app-details-section>
+
+  <app-details-section title="Modern & High-Performance Medical Landing Page"
+  description="
+  <strong>Framework:</strong> Angular, TypeScript<br>
+  <strong>Styling:</strong> Bootstrap 5, CSS3 (Custom Variables)<br>
+  <strong>Key Features:</strong> White-label Architecture, Dynamic Content, Personalized Theming, Lead Generation Focused."></app-details-section>
+
+  <app-details-section title="White-label Architecture"
+  description="Features a decoupled data layer using a centralized configuration file (clinic-config.ts) for rapid deployment and easy customization across different medical brands."></app-details-section>
+
+  <app-details-section title="Dynamic Theming"
+  description="Implemented CSS Variables (:root) for instant global brand color updates, ensuring consistency and ease of maintenance across the entire application."></app-details-section>
+</div>

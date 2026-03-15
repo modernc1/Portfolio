@@ -7,6 +7,7 @@ import { MedicalBlogComponent } from '../../components/portfolio/projects/medica
 import { CarsComponent } from '../../components/portfolio/projects/cars/cars.component';
 import { TimetablesProComponent } from '../../components/portfolio/projects/timetables-pro/timetables-pro.component';
 import { ResumeAiComponent } from '../../components/portfolio/projects/resume-ai/resume-ai.component';
+import { HealthcareClinicComponent } from '../../components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,31 @@ import { ResumeAiComponent } from '../../components/portfolio/projects/resume-ai
 export class ProjectService {
 
   projects = signal<Project[]>([
+    {
+      id: 7,
+      title: 'HealthCare Clinic – High-Conversion Medical Landing Page',
+      imageUrl: 'assets/img/healthcare-clinic/main.jpeg',
+      gallery: [
+        'assets/img/healthcare-clinic/main.jpeg',
+        'assets/img/healthcare-clinic/hero.png',
+        'assets/img/healthcare-clinic/about.png',
+        'assets/img/healthcare-clinic/review.png',
+        'assets/img/healthcare-clinic/contact.png',
+      ],
+      content: HealthcareClinicComponent,
+      liveUrl: 'https://heartfelt-muffin-1ad8e9.netlify.app/'
+    },
+    {
+      id: 4,
+      title: 'Responsive Shoes E-Commerce Web-Application',
+      imageUrl: 'assets/img/shoes-store/shoes-store-main-img.jpeg',
+      gallery: [
+        'assets/img/shoes-store/shoes-store-main-img.jpeg',
+        'assets/img/shoes-store/dashboard.jpeg',
+        'assets/img/shoes-store/whishlist.jpeg',
+        'assets/img/shoes-store/shoe-details.jpeg',
+      ]
+    },
     {
       id: 8,
       title: 'ResumeAI Builder & Analyzer',
@@ -51,19 +77,7 @@ export class ProjectService {
         'assets/img/real-estate/admin-previousWork.jpeg'
       ]
     },
-    {
-      id: 4,
-      title: 'Responsive Shoes E-Commerce Web-Application',
-      imageUrl: 'assets/img/shoes-store/shoes-store-main-img.jpeg',
-      gallery: [
-        'assets/img/shoes-store/shoes-store-main-img.jpeg',
-        'assets/img/shoes-store/products-page.jpeg',
-        'assets/img/shoes-store/reactive-forms.jpeg',
-        'assets/img/shoes-store/cart.jpeg',
-        'assets/img/shoes-store/tap-payment-integration.jpeg',
-        'assets/img/shoes-store/content-management.jpeg'
-      ]
-    },
+
     {
       id: 5,
       title: 'Responsive Electronics E-Commerce Web-Application',

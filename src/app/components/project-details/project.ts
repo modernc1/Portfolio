@@ -8,4 +8,5 @@ export interface Project{
   description?: string
   technologies?: string[]
   content?: Type<object>
+  liveUrl?: string
 }

@@ -9,7 +9,10 @@
               <div class="overlay">
                   <h3>{{project.title}}</h3>
                   <!-- <p>E-Commerce Website for Shoes</p> -->
-                  <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="view-project-btn">See Details<i class="fas fa-external-link-alt"></i></a>
+                  <div class="btn-group">
+                    <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="view-project-btn">See Details<i class="fas fa-external-link-alt"></i></a>
+                    <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="view-project-btn live-demo-btn">Live Demo<i class="fas fa-external-link-alt"></i></a>
+                  </div>
               </div>
             </div>
         </div>

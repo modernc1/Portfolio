@@ -7,6 +7,7 @@ import { MedicalBlogComponent } from './components/portfolio/projects/medical-bl
 import { CarsComponent } from './components/portfolio/projects/cars/cars.component';
 import { TimetablesProComponent } from './components/portfolio/projects/timetables-pro/timetables-pro.component';
 import { ResumeAiComponent } from './components/portfolio/projects/resume-ai/resume-ai.component';
+import { HealthcareClinicComponent } from './components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 export const routes: Routes = [
@@ -21,5 +22,6 @@ export const routes: Routes = [
     { path: 'Responsive-Electronics-E-Commerce-Web-Application', component: EStoreComponent},
     { path: 'Responsive-Medical-Blog-Web-Application', component: MedicalBlogComponent},
     { path: 'Car-Rental-Landing-Page', component: CarsComponent},
+    { path: 'HealthCare-Clinic-–-High-Conversion-Medical-Landing-Page', component: HealthcareClinicComponent},
   ]}
 ];
