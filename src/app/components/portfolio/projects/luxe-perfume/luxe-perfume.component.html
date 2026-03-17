@@ -1,0 +1,29 @@
+<div class="project-header">
+  <div class="header-container">
+    <h1>{{ project?.title }}</h1>
+    <div class="header-actions" *ngIf="project?.liveUrl">
+      <a [href]="project?.liveUrl" target="_blank" class="open-btn">
+        <i class="bi bi-box-arrow-up-right"></i> Live Demo
+      </a>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
+</div>
+
+<div class="project-content">
+  <app-details-section title="Sophisticated E-commerce Shell"
+  description="A production-ready Angular template engineered for luxury fragrance brands, featuring a mobile-first approach and high-performance state management."></app-details-section>
+
+  <app-details-section title="Technical Architecture"
+  description="
+  <strong>Framework:</strong> Angular 20 (Signals, Standalone)<br>
+  <strong>State Management:</strong> Reactive Signals for cart and responsive logic<br>
+  <strong>Branding:</strong> Centralized Brand Configuration System"></app-details-section>
+
+  <app-details-section title="Centralized Branding Engine"
+  description="Developed a unique configuration system that allows for 100% of the site’s palette (Burgundy & Grey), typography, and data to be swapped instantly from a single file."></app-details-section>
+
+  <app-details-section title="Ultra-Small Viewport Logic"
+  description="Intelligent breakpoint handling specifically for screens < 382px, dynamically relocating brand identity elements to maintain a clean, high-end UX."></app-details-section>
+</div>

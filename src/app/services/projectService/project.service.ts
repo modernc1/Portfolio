@@ -8,6 +8,7 @@ import { CarsComponent } from '../../components/portfolio/projects/cars/cars.com
 import { TimetablesProComponent } from '../../components/portfolio/projects/timetables-pro/timetables-pro.component';
 import { ResumeAiComponent } from '../../components/portfolio/projects/resume-ai/resume-ai.component';
 import { HealthcareClinicComponent } from '../../components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
+import { LuxePerfumeComponent } from '../../components/portfolio/projects/luxe-perfume/luxe-perfume.component';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,21 @@ import { HealthcareClinicComponent } from '../../components/portfolio/projects/h
 export class ProjectService {
 
   projects = signal<Project[]>([
+    {
+      id: 9,
+      title: 'Luxe Perfume — High-End E-commerce Template',
+      imageUrl: 'assets/img/luxe-perfume/main.jpeg',
+      gallery: [
+        'assets/img/luxe-perfume/main.jpeg',
+        'assets/img/luxe-perfume/collection.jpeg',
+        'assets/img/luxe-perfume/boutiques.jpeg',
+        'assets/img/luxe-perfume/checkout.jpeg',
+        'assets/img/luxe-perfume/cart.png',
+      ],
+      content: LuxePerfumeComponent,
+      liveUrl: 'https://luxeperfumer.netlify.app/',
+      technologies: ['Angular 20', 'Signals', 'CSS Variables', 'Responsive Design']
+    },
     {
       id: 7,
       title: 'HealthCare Clinic – High-Conversion Medical Landing Page',

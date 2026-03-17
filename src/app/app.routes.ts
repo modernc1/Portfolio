@@ -9,12 +9,14 @@ import { TimetablesProComponent } from './components/portfolio/projects/timetabl
 import { ResumeAiComponent } from './components/portfolio/projects/resume-ai/resume-ai.component';
 import { HealthcareClinicComponent } from './components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { LuxePerfumeComponent } from './components/portfolio/projects/luxe-perfume/luxe-perfume.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
 
   { path: 'projects', component: ProjectDetailsComponent, children: [
     // { path: 'Customizable-Responsive-Dashboard'},
+    { path: 'Luxe-Perfume-—-High-End-E-commerce-Template', component: LuxePerfumeComponent},
     { path: 'ResumeAI-Builder-&-Analyzer', component: ResumeAiComponent},
     { path: 'Timetables-Pro-Mobile-Application', component: TimetablesProComponent},
     { path: 'Responsive-Real-Estate-Web-Application', component: RealEstateComponent},
