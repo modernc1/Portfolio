@@ -1,29 +1,47 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { RealEstateComponent } from './components/portfolio/projects/real-estate/real-estate.component';
-import { ShoeStoreComponent } from './components/portfolio/projects/shoe-store/shoe-store.component';
-import { EStoreComponent } from './components/portfolio/projects/e-store/e-store.component';
-import { MedicalBlogComponent } from './components/portfolio/projects/medical-blog/medical-blog.component';
-import { CarsComponent } from './components/portfolio/projects/cars/cars.component';
-import { TimetablesProComponent } from './components/portfolio/projects/timetables-pro/timetables-pro.component';
-import { ResumeAiComponent } from './components/portfolio/projects/resume-ai/resume-ai.component';
-import { HealthcareClinicComponent } from './components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
-import { LuxePerfumeComponent } from './components/portfolio/projects/luxe-perfume/luxe-perfume.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
 
   { path: 'projects', component: ProjectDetailsComponent, children: [
     // { path: 'Customizable-Responsive-Dashboard'},
-    { path: 'Luxe-Perfume-—-High-End-E-commerce-Template', component: LuxePerfumeComponent},
-    { path: 'ResumeAI-Builder-&-Analyzer', component: ResumeAiComponent},
-    { path: 'Timetables-Pro-Mobile-Application', component: TimetablesProComponent},
-    { path: 'Responsive-Real-Estate-Web-Application', component: RealEstateComponent},
-    { path: 'Responsive-Shoes-E-Commerce-Web-Application', component: ShoeStoreComponent},
-    { path: 'Responsive-Electronics-E-Commerce-Web-Application', component: EStoreComponent},
-    { path: 'Responsive-Medical-Blog-Web-Application', component: MedicalBlogComponent},
-    { path: 'Car-Rental-Landing-Page', component: CarsComponent},
-    { path: 'HealthCare-Clinic-–-High-Conversion-Medical-Landing-Page', component: HealthcareClinicComponent},
+    {
+      path: 'Luxe-Perfume-—-High-End-E-commerce-Template',
+      loadComponent: () => import('./components/portfolio/projects/luxe-perfume/luxe-perfume.component').then(m => m.LuxePerfumeComponent)
+    },
+    {
+      path: 'ResumeAI-Builder-&-Analyzer',
+      loadComponent: () => import('./components/portfolio/projects/resume-ai/resume-ai.component').then(m => m.ResumeAiComponent)
+    },
+    {
+      path: 'Timetables-Pro-Mobile-Application',
+      loadComponent: () => import('./components/portfolio/projects/timetables-pro/timetables-pro.component').then(m => m.TimetablesProComponent)
+    },
+    {
+      path: 'Responsive-Real-Estate-Web-Application',
+      loadComponent: () => import('./components/portfolio/projects/real-estate/real-estate.component').then(m => m.RealEstateComponent)
+    },
+    {
+      path: 'Responsive-Shoes-E-Commerce-Web-Application',
+      loadComponent: () => import('./components/portfolio/projects/shoe-store/shoe-store.component').then(m => m.ShoeStoreComponent)
+    },
+    {
+      path: 'Responsive-Electronics-E-Commerce-Web-Application',
+      loadComponent: () => import('./components/portfolio/projects/e-store/e-store.component').then(m => m.EStoreComponent)
+    },
+    {
+      path: 'Responsive-Medical-Blog-Web-Application',
+      loadComponent: () => import('./components/portfolio/projects/medical-blog/medical-blog.component').then(m => m.MedicalBlogComponent)
+    },
+    {
+      path: 'Car-Rental-Landing-Page',
+      loadComponent: () => import('./components/portfolio/projects/cars/cars.component').then(m => m.CarsComponent)
+    },
+    {
+      path: 'HealthCare-Clinic-–-High-Conversion-Medical-Landing-Page',
+      loadComponent: () => import('./components/portfolio/projects/healthcare-clinic/healthcare-clinic.component').then(m => m.HealthcareClinicComponent)
+    },
   ]}
 ];

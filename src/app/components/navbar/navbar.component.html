@@ -1,0 +1,18 @@
+<header class="main-header">
+    <nav class="navbar">
+        <div class="logo">
+            <a [routerLink]="['/']" fragment="hero">Mohamed</a>
+        </div>
+        <ul class="nav-links" [class.nav-active]="isNavActive()">
+            <li><a [routerLink]="['/']" fragment="about" (click)="closeNav()">Who am I</a></li>
+            <li><a [routerLink]="['/']" fragment="skills" (click)="closeNav()">Skills</a></li>
+            <li><a [routerLink]="['/']" fragment="contact" (click)="closeNav()">Contact me</a></li>
+            <li><a [routerLink]="['/']" fragment="portfolio" (click)="closeNav()">Projects</a></li>
+        </ul>
+        <div class="burger" [class.toggle]="isNavActive()" (click)="toggleNav()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>

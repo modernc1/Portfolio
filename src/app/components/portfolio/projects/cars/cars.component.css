@@ -1,24 +1,95 @@
-.image {
-  width: 100%;
-  min-width: 200px;
-  max-width: 500px;
-  height: 400px;
-  max-height: 400px;
-  min-height: 200px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+.case-study {
+  background-color: var(--surface-1);
+  min-height: 100vh;
+  padding-bottom: 6rem;
 }
 
-.image .item-image{
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: top center; /* Start at the top */
-    transition: background-position 3s ease;
+.case-study-header {
+  padding: 10rem 0 4rem;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4rem;
 }
 
-.image .item-image:hover{
-    background-position: bottom center; /* Scroll to the bottom on hover */
+.case-study-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  line-height: 1.1;
+  max-width: 900px;
 }
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--surface-sunan);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.meta-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 6rem 0;
+}
+
+.content-block h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-block p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.gallery-showcase {
+  margin-bottom: 6rem;
+}
+
+.action-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .case-study-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+  }
+  
+  .case-study-header {
+      padding: 6rem 0 3rem;
+  }
+}
+

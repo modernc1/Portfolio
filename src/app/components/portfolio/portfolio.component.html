@@ -1,17 +1,27 @@
 <section id="portfolio" class="portfolio-section">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="portfolio-grid">
-            <div *ngFor="let project of projectService.projects()" class="portfolio-item">
-              <div class="item-image" [style.backgroundImage]="'url(' + project.imageUrl + ')'"></div>
+    <div class="section-container">
+        <h2 class="text-gradient">Featured Work</h2>
 
-              <!-- <img style="object-position: top;" [src]="project.imageUrl ?? ''" alt="G-Store"> -->
-              <div class="overlay">
+        <div class="filter-container">
+            <button [class.active]="selectedCategory() === 'All'" (click)="setCategory('All')">All Projects</button>
+            <button [class.active]="selectedCategory() === 'Web Applications'" (click)="setCategory('Web Applications')">Web Apps</button>
+            <button [class.active]="selectedCategory() === 'Mobile Applications'" (click)="setCategory('Mobile Applications')">Mobile Apps</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div *ngFor="let project of filteredProjects()" class="portfolio-card">
+              <div class="card-image-wrapper">
+                  <img [src]="project.imageUrl" [alt]="project.title" class="item-image" loading="lazy">
+                  <div class="card-badges" *ngIf="project.technologies">
+                      <span *ngFor="let tech of project.technologies.slice(0, 2)" class="tech-tag">{{tech}}</span>
+                  </div>
+              </div>
+
+              <div class="card-content">
                   <h3>{{project.title}}</h3>
-                  <!-- <p>E-Commerce Website for Shoes</p> -->
-                  <div class="btn-group">
-                    <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="view-project-btn">See Details<i class="fas fa-external-link-alt"></i></a>
-                    <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="view-project-btn live-demo-btn">Live Demo<i class="fas fa-external-link-alt"></i></a>
+                  <div class="card-footer">
+                    <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="btn-link">View Details <i class="bi bi-arrow-right"></i></a>
+                    <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="btn-icon" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
               </div>
             </div>

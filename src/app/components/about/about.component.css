@@ -1,105 +1,134 @@
 .about-section {
-    padding: 8rem 0;
-    background-color: var(--bg-light);
-    overflow: hidden;
+    background-color: var(--surface-1);
+    position: relative;
 }
 
-.section-badge {
-    display: table;
-    margin: 0 auto 1rem;
-    padding: 0.5rem 1rem;
-    background: rgba(37, 99, 235, 0.1);
-    color: var(--primary-color);
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 4rem;
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
-.about-card {
-    background: var(--card-bg);
-    border-radius: 2rem;
-    padding: 4rem;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
-}
-
-.about-text {
-    max-width: 800px;
-    margin: 0 auto 4rem;
-}
-
-.about-text p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    text-align: center;
-    opacity: 0.9;
-}
-
-.stats-grid {
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: start;
 }
 
-.stat-item {
-    text-align: center;
+.about-bio h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+}
+
+.lead-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.bio-details p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.about-capabilities {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.capability-card {
+    background: var(--surface-sunan);
     padding: 2rem;
-    border-radius: 1.5rem;
-    background: var(--bg-light);
-    transition: all var(--transition-speed);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    transition: all var(--transition-base);
 }
 
-.stat-item:hover {
-    transform: translateY(-5px);
-    background: var(--white);
-    box-shadow: var(--shadow);
+.capability-card.highlight {
+    background: var(--primary);
 }
 
-.stat-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-color);
+.capability-card.highlight .cap-header,
+.capability-card.highlight p {
     color: white;
+}
+
+.capability-card.highlight .cap-header i {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cap-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.cap-header i {
+    width: 40px;
+    height: 40px;
+    background: var(--surface-2);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
+    color: var(--primary);
 }
 
-.stat-item h3 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat-item p {
-    font-size: 1rem;
-    color: var(--text-muted);
-    font-weight: 500;
+.cap-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
     margin: 0;
 }
 
+.cap-stats {
+    display: flex;
+    gap: 3rem;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+.capability-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
 @media (max-width: 992px) {
-    .about-card {
-        padding: 3rem 2rem;
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .about-card {
+        padding: 3rem 1.5rem;
     }
 }
 

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-contact',
   imports: [],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrl: './contact.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactComponent {
   constructor(private contactService: ContactService) {}

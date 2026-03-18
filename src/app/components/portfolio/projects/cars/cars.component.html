@@ -1,12 +1,48 @@
-<div class="project-header">
-  <div class="header-container">
-    <h1>{{ project?.title }}</h1>
+<!-- Senior Developer Case Study Layout -->
+<section class="case-study">
+  <div class="case-study-header">
+      <div class="section-container">
+          <h1 class="text-gradient">{{ project?.title }}</h1>
+          <div class="project-meta">
+              <div class="meta-item">
+                  <span class="meta-label">Role</span>
+                  <span class="meta-value">{{ project?.role || 'Lead Developer' }}</span>
+              </div>
+              <div class="meta-item">
+                  <span class="meta-label">Duration</span>
+                  <span class="meta-value">{{ project?.duration || '4 Weeks' }}</span>
+              </div>
+              <div class="meta-item" *ngIf="project?.technologies">
+                  <span class="meta-label">Stack</span>
+                  <div class="meta-tags">
+                      <span *ngFor="let tech of project?.technologies" class="tech-tag">{{tech}}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 
-  <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
-</div>
+  <div class="section-container">
+      <div class="gallery-showcase">
+          <app-project-gallery [images]="project?.gallery || []"></app-project-gallery>
+      </div>
 
-<div class="project-content">
-  <app-details-section title="Modern Rental Landing Page"
-  description="Built with pure HTML5, CSS3, and Javascript to deliver a high-performance, responsive landing page for car rentals with smooth animations and intuitive navigation."></app-details-section>
-</div>
+      <div class="case-study-grid">
+          <div class="content-block">
+              <h2 class="text-gradient">The Challenge</h2>
+              <p>{{ project?.challenge || 'Designing a seamless, high-performance user interface that balances complex data visualization with intuitive user flows.' }}</p>
+          </div>
+          
+          <div class="content-block">
+              <h2 class="text-gradient">The Solution</h2>
+              <p>{{ project?.solution || 'Implemented a modular architecture with focused state management, ensuring lightning-fast load times and a responsive experience across all devices.' }}</p>
+          </div>
+      </div>
+
+      <div class="action-footer" *ngIf="project?.liveUrl">
+          <a [href]="project?.liveUrl" target="_blank" class="btn primary-btn">
+              View Live Project <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+      </div>
+  </div>
+</section>

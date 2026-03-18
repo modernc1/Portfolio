@@ -1,14 +1,5 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Project } from '../../components/project-details/project';
-import { RealEstateComponent } from '../../components/portfolio/projects/real-estate/real-estate.component';
-import { ShoeStoreComponent } from '../../components/portfolio/projects/shoe-store/shoe-store.component';
-import { EStoreComponent } from '../../components/portfolio/projects/e-store/e-store.component';
-import { MedicalBlogComponent } from '../../components/portfolio/projects/medical-blog/medical-blog.component';
-import { CarsComponent } from '../../components/portfolio/projects/cars/cars.component';
-import { TimetablesProComponent } from '../../components/portfolio/projects/timetables-pro/timetables-pro.component';
-import { ResumeAiComponent } from '../../components/portfolio/projects/resume-ai/resume-ai.component';
-import { HealthcareClinicComponent } from '../../components/portfolio/projects/healthcare-clinic/healthcare-clinic.component';
-import { LuxePerfumeComponent } from '../../components/portfolio/projects/luxe-perfume/luxe-perfume.component';
 
 @Injectable({
   providedIn: 'root'
@@ -27,9 +18,13 @@ export class ProjectService {
         'assets/img/luxe-perfume/checkout.jpeg',
         'assets/img/luxe-perfume/cart.png',
       ],
-      content: LuxePerfumeComponent,
       liveUrl: 'https://luxeperfumer.netlify.app/',
-      technologies: ['Angular 20', 'Signals', 'CSS Variables', 'Responsive Design']
+      technologies: ['Angular 20', 'Signals', 'CSS Variables', 'Responsive Design'],
+      challenge: 'Creating a high-performance e-commerce experience with smooth transitions and real-time state management using Signals.',
+      solution: 'Leveraged Angular Signals for reactivity and CSS Variables for a dynamic, high-end theme setup.',
+      role: 'Full Stack Lead',
+      duration: '2 Weeks',
+      category: 'Web Applications'
     },
     {
       id: 7,
@@ -42,8 +37,9 @@ export class ProjectService {
         'assets/img/healthcare-clinic/review.png',
         'assets/img/healthcare-clinic/contact.png',
       ],
-      content: HealthcareClinicComponent,
-      liveUrl: 'https://heartfelt-muffin-1ad8e9.netlify.app/'
+      liveUrl: 'https://heartfelt-muffin-1ad8e9.netlify.app/',
+      technologies: ['Angular 20', 'Signals', 'JavaScript', 'Responsive Design', 'Landing Page Optimization'],
+      category: 'Web Applications'
     },
     {
       id: 4,
@@ -54,7 +50,9 @@ export class ProjectService {
         'assets/img/shoes-store/dashboard.jpeg',
         'assets/img/shoes-store/whishlist.jpeg',
         'assets/img/shoes-store/shoe-details.jpeg',
-      ]
+      ],
+      technologies: ['Angular', 'ASP .NET Core', 'SCSS', 'Cart Logic', 'Dashboard UI'],
+      category: 'Web Applications'
     },
     {
       id: 8,
@@ -66,7 +64,9 @@ export class ProjectService {
         'assets/img/resume-ai/3.png',
         'assets/img/resume-ai/4.png',
         'assets/img/resume-ai/5.png',
-      ]
+      ],
+      technologies: ['Flutter', 'AI Integration', 'File Processing', 'PDF Generation', 'Modern UI'],
+      category: 'Mobile Applications'
     },
     {
       id: 2,
@@ -76,7 +76,9 @@ export class ProjectService {
         'assets/img/timetables-pro/main.png',
         'assets/img/timetables-pro/generated-image-78f2d2f6-cc72-4516-9ce0-c7112f086fdb.png',
         'assets/img/timetables-pro/generated-image-de266818-d893-4075-9f63-b552ce7aa1ad.png',
-      ]
+      ],
+      technologies: ['Flutter', 'Firebase messaging', 'Cross-Platform', 'State Management', 'Mobile UX'],
+      category: 'Mobile Applications'
     },
     {
       id: 3,
@@ -91,7 +93,9 @@ export class ProjectService {
         'assets/img/real-estate/admin-add-property.jpeg',
         'assets/img/real-estate/properties_listing.jpeg',
         'assets/img/real-estate/admin-previousWork.jpeg'
-      ]
+      ],
+      technologies: ['Angular', 'ASP.NET Core', 'SQL Server', 'Auth Systems', 'Admin Dashboard'],
+      category: 'Web Applications'
     },
 
     {
@@ -105,7 +109,9 @@ export class ProjectService {
         'assets/img/e-store/features.png',
         'assets/img/e-store/cart.png',
         'assets/img/e-store/payment.png'
-      ]
+      ],
+      technologies: ['ASP .NET MVC', '', 'Node.js/ASP.NET', 'Payment Integration'],
+      category: 'Web Applications'
     },
     {
       id: 6,
@@ -117,7 +123,9 @@ export class ProjectService {
         'assets/img/medical-blog/details.png',
         'assets/img/medical-blog/content-management.png',
         'assets/img/medical-blog/responsive-phone.png'
-      ]
+      ],
+      technologies: ['Angular', 'TypeScript', 'Content Management', 'Responsive Design'],
+      category: 'Web Applications'
     },
     {
       id: 7,
@@ -125,7 +133,9 @@ export class ProjectService {
       imageUrl: 'assets/img/cars/Car_site_main_img.jpeg',
       gallery: [
         'assets/img/cars/Car_site_main_img.jpeg'
-      ]
+      ],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Animation', 'High Performance'],
+      category: 'Web Applications'
     }
   ])
 

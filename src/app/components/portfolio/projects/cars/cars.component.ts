@@ -8,7 +8,7 @@ import { Project } from '../../../project-details/project';
 @Component({
   selector: 'app-cars',
   standalone: true,
-  imports: [CommonModule, DetailsSectionComponent, ProjectGalleryComponent],
+  imports: [CommonModule, ProjectGalleryComponent],
   templateUrl: './cars.component.html',
   styleUrl: './cars.component.css'
 })

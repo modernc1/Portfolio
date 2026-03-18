@@ -1,21 +1,56 @@
 <section id="contact" class="contact-section">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <p>Have a project in mind? Let's talk!</p>
-        <p class="contact-email">
-          <a href="mailto:Modernc12@gmail.com"><i class="bi bi-envelope"></i> Modernc12&#64;gmail.com</a>
-        </p>
-        <form class="contact-form" (submit)="onSubmit($event)">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
-          <button type="submit" class="btn primary-btn">Send Message</button>
-        </form>
+    <div class="section-container">
+        <div class="contact-grid">
+            <!-- Contact Narrative -->
+            <div class="contact-info">
+                <h2 class="text-gradient">Let's build something <br>extraordinary.</h2>
+                <p class="lead-text">Have a complex engineering challenge or a design-first project? Reach out and let's discuss how we can bring it to life.</p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:Modernc12@gmail.com" class="contact-method-card">
+                        <div class="method-icon"><i class="bi bi-envelope-at"></i></div>
+                        <div class="method-details">
+                            <span class="label">Email Me</span>
+                            <span class="value">Modernc12&#64;gmail.com</span>
+                        </div>
+                    </a>
+                    
+                    <div class="social-stack">
+                        <a href="https://github.com/modernc1" target="_blank" class="social-pilled" title="GitHub">
+                            <i class="bi bi-github"></i> <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamed-ayman-172149287/" target="_blank" class="social-pilled" title="LinkedIn">
+                            <i class="bi bi-linkedin"></i> <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="social-links">
-            <a href="https://github.com/modernc1" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/mohamed-aymen-172149287" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="mailto:Modernc12@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+            <!-- Modern Form Card -->
+            <div class="contact-form-wrapper">
+                <div class="form-card glass-effect">
+                    <form (submit)="onSubmit($event)">
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." required rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary-btn full-width">
+                            Send Inquiry <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </section>

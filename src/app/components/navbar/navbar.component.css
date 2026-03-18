@@ -1,0 +1,128 @@
+.main-header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: var(--container-width);
+    z-index: 1000;
+    transition: all var(--transition-base);
+    background-color: transparent
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.logo a {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+.nav-links a:hover {
+    background: var(--primary-muted);
+    color: var(--primary);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-main);
+    position: absolute;
+    transition: 0.3s;
+    right: 0;
+}
+
+.line1 { top: 6px; }
+.line2 { top: 11px; }
+.line3 { top: 16px; }
+
+.burger.toggle .line1 { transform: rotate(45deg); top: 11px; }
+.burger.toggle .line2 { opacity: 0; }
+.burger.toggle .line3 { transform: rotate(-45deg); top: 11px; }
+
+@media (max-width: 768px) {
+    .main-header {
+        top: 1rem;
+        width: 95%;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        left: 0;
+        height: auto;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 24px;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    .nav-links.nav-active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

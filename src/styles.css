@@ -1,68 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --primary-color: #252ceb;
-    --primary-hover: #231dd8;
-    --secondary-color: #64748b;
-    --accent-color: #10b981;
-    --bg-light: #f8fafc;
-    --bg-dark: #0f172a;
-    --text-color: #1e293b;
-    --text-muted: #64748b;
-    --white: #ffffff;
-    --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --font-family-primary: 'Inter', 'Cairo', sans-serif;
-    --transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --second-bg-gradient: #eff6ff;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    /* Senior Dev Palette - Engineering Focused */
+    --primary: #6366f1;
+    --primary-muted: rgba(99, 102, 241, 0.1);
+    --secondary: #0ea5e9;
+    --accent: #10b981;
+
+    /* Surface System (Zinc/Slate) */
+    --surface-sunan: #ffffff;
+    --surface-1: #f8fafc;
+    --surface-2: #f1f5f9;
+    --surface-3: #e2e8f0;
+
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-dim: #94a3b8;
+
+    --border-subtle: rgba(0, 0, 0, 0.05);
+    --border-strong: rgba(0, 0, 0, 0.1);
+
+    /* Spacing & Layout */
+    --section-spacing: 8rem;
+    --container-width: 1200px;
+    --radius-full: 9999px;
+    --radius-lg: 1.5rem;
+    --radius-md: 0.75rem;
+
+    /* Engineering Details */
+    --grid-opacity: 0.03;
+    --grid-size: 30px;
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Modern Glass */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-blur: blur(12px);
 }
 
+/* Global Reset & Base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-body {
-    font-family: var(--font-family-primary);
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-light);
-    overflow-x: hidden;
-    max-width: 100%;
-    position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
+    background-color: var(--surface-1);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Subtle Engineering Grid Background */
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,var(--grid-opacity)) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,var(--grid-opacity)) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+}
 
-.container {
-    max-width: 1280px;
+/* Utility Classes */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-subtle);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-container {
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: var(--section-spacing) 2rem;
 }
 
-h1, h2, h3 {
+/* Typography Refinement */
+h1, h2, h3, h4 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: var(--text-color);
-    font-weight: 700;
-    line-height: 1.2;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.25rem; }
-h3 { font-size: 1.5rem; }
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: 1.75rem; }
 
 p {
-    margin-bottom: 1.25rem;
     color: var(--text-muted);
+    font-size: 1.125rem;
+    max-width: 65ch;
 }
 
 a {
@@ -88,6 +119,7 @@ a:hover {
     border: none;
     gap: 0.5rem;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .primary-btn {
