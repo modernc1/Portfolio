@@ -165,6 +165,14 @@ import { ProjectService } from '../../services/projectService/project.service';
 
     .is-mobile .gallery-img:not([style*="--index: 0"]) {
       object-fit: contain;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-img:not([style*="--index: 0"]) {
+        object-fit: contain;
+        object-position: center;
+      }
     }
 
     .gallery-img.active {
@@ -215,7 +223,7 @@ import { ProjectService } from '../../services/projectService/project.service';
 
     .instruction {
       position: absolute;
-      bottom: 2rem;
+      bottom: 1rem;
       color: var(--text-dim);
       font-size: 0.8rem;
       letter-spacing: 0.15em;

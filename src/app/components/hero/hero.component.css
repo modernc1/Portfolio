@@ -139,6 +139,29 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 556px) {
+    .hero-visual {
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: 0 0.5rem;
+    }
+
+    .window-body {
+        padding: 1rem;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        overflow-x: auto;
+    }
+
+    .code-window {
+        transform: none; /* Flatten rotation for better visibility on small screens */
+    }
+
+    .code-window:hover {
+        transform: scale(1.02);
+    }
+}
+
 .btn {
     padding: 0.875rem 2.25rem;
     border-radius: var(--radius-full);

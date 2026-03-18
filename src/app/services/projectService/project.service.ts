@@ -69,7 +69,8 @@ export class ProjectService {
         'assets/img/resume-ai/5.png',
       ],
       technologies: ['Flutter', 'AI Integration', 'File Processing', 'PDF Generation', 'Modern UI'],
-      category: 'Mobile Applications'
+      category: 'Mobile Applications',
+      marketingTagline: 'AI-Powered Precision for Career Success'
     },
     {
       id: 2,
@@ -81,7 +82,8 @@ export class ProjectService {
         'assets/img/timetables-pro/generated-image-de266818-d893-4075-9f63-b552ce7aa1ad.png',
       ],
       technologies: ['Flutter', 'Firebase messaging', 'Cross-Platform', 'State Management', 'Mobile UX'],
-      category: 'Mobile Applications'
+      category: 'Mobile Applications',
+      marketingTagline: 'Master Your Schedule with Professional Precision'
     },
     {
       id: 3,
@@ -98,7 +100,8 @@ export class ProjectService {
         'assets/img/real-estate/admin-previousWork.jpeg'
       ],
       technologies: ['Angular', 'ASP.NET Core', 'SQL Server', 'Auth Systems', 'Admin Dashboard'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Modern Real Estate Management Simplified'
     },
 
     {
@@ -114,7 +117,8 @@ export class ProjectService {
         'assets/img/e-store/payment.png'
       ],
       technologies: ['ASP .NET MVC', '', 'Node.js/ASP.NET', 'Payment Integration'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'The Ultimate High-Tech Shopping Experience'
     },
     {
       id: 6,
@@ -128,7 +132,8 @@ export class ProjectService {
         'assets/img/medical-blog/responsive-phone.png'
       ],
       technologies: ['Angular', 'TypeScript', 'Content Management', 'Responsive Design'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Empowering Health through Digital Knowledge'
     },
     {
       id: 7,
@@ -138,7 +143,8 @@ export class ProjectService {
         'assets/img/cars/Car_site_main_img.jpeg'
       ],
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'Animation', 'High Performance'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Seamless Mobility at Your Fingertips'
     }
   ])
 
