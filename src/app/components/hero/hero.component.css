@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: clamp(8rem, 15vh, 12rem) 0 6rem;
+    padding: clamp(10rem, 20vh, 15rem) 0 6rem;
     min-height: 90vh;
     background-color: var(--surface-1);
     position: relative;

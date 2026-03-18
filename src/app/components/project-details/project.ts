@@ -14,4 +14,5 @@ export interface Project {
   role?: string;
   duration?: string;
   category?: 'Web Applications' | 'Mobile Applications';
+  marketingTagline?: string; // Cinematic Showtime: Marketing "Marketing Beat" tagline
 }

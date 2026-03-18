@@ -24,7 +24,8 @@ export class ProjectService {
       solution: 'Leveraged Angular Signals for reactivity and CSS Variables for a dynamic, high-end theme setup.',
       role: 'Full Stack Lead',
       duration: '2 Weeks',
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Defining the Future of High-End E-Commerce'
     },
     {
       id: 7,
@@ -39,7 +40,8 @@ export class ProjectService {
       ],
       liveUrl: 'https://heartfelt-muffin-1ad8e9.netlify.app/',
       technologies: ['Angular 20', 'Signals', 'JavaScript', 'Responsive Design', 'Landing Page Optimization'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Precision Medical Solutions with High-Conversion Flow'
     },
     {
       id: 4,
@@ -52,7 +54,8 @@ export class ProjectService {
         'assets/img/shoes-store/shoe-details.jpeg',
       ],
       technologies: ['Angular', 'ASP .NET Core', 'SCSS', 'Cart Logic', 'Dashboard UI'],
-      category: 'Web Applications'
+      category: 'Web Applications',
+      marketingTagline: 'Responsive E-Commerce Architecture Redigitized'
     },
     {
       id: 8,
