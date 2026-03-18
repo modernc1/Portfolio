@@ -9,7 +9,7 @@ export class ProjectService {
   projects = signal<Project[]>([
     {
       id: 9,
-      title: 'Luxe Perfume — High-End E-commerce Template',
+      title: 'Luxe Perfume High-End E-commerce Template',
       imageUrl: 'assets/img/luxe-perfume/main.jpeg',
       gallery: [
         'assets/img/luxe-perfume/main.jpeg',

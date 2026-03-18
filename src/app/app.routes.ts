@@ -8,7 +8,7 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectDetailsComponent, children: [
     // { path: 'Customizable-Responsive-Dashboard'},
     {
-      path: 'Luxe-Perfume-—-High-End-E-commerce-Template',
+      path: 'Luxe-Perfume-High-End-E-commerce-Template',
       loadComponent: () => import('./components/portfolio/projects/luxe-perfume/luxe-perfume.component').then(m => m.LuxePerfumeComponent)
     },
     {
