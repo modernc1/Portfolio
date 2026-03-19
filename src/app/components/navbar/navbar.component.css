@@ -63,9 +63,19 @@
 .burger {
     display: none;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    border-radius: var(--radius-md);
+    transition: background 0.3s;
+}
+
+.burger:hover {
+    background: var(--primary-muted);
 }
 
 .burger div {
@@ -73,47 +83,77 @@
     height: 2px;
     background-color: var(--text-main);
     position: absolute;
-    transition: 0.3s;
-    right: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.line1 { top: 6px; }
-.line2 { top: 11px; }
-.line3 { top: 16px; }
+.line1 { transform: translateY(-6px); }
+.line2 { opacity: 1; }
+.line3 { transform: translateY(6px); }
 
-.burger.toggle .line1 { transform: rotate(45deg); top: 11px; }
-.burger.toggle .line2 { opacity: 0; }
-.burger.toggle .line3 { transform: rotate(-45deg); top: 11px; }
+.burger.toggle .line1 {
+    transform: rotate(45deg);
+}
+.burger.toggle .line2 {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+.burger.toggle .line3 {
+    transform: rotate(-45deg);
+}
 
-@media (max-width: 768px) {
-    .main-header {
-        top: 1rem;
-        width: 95%;
+@media (max-width: 992px) {
+    .burger {
+        display: flex;
     }
 
     .nav-links {
         position: fixed;
-        top: 5rem;
+        top: calc(100% + 1rem);
         right: 0;
         left: 0;
-        height: auto;
-        background: var(--glass-bg);
+        background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 2rem;
-        border-radius: 24px;
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--shadow-lg);
-        transform: translateY(-20px);
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-20px) scale(0.95);
         opacity: 0;
         visibility: hidden;
-        transition: 0.4s;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        pointer-events: none;
+        gap: 0.5rem;
     }
 
     .nav-links.nav-active {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
         visibility: visible;
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem 1.25rem;
+    }
+
+    .logo a {
+        font-size: 1.1rem;
     }
 }
 

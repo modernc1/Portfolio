@@ -78,11 +78,32 @@ body {
     padding: var(--section-spacing) 2rem;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 5rem;
+        --radius-lg: 1rem;
+    }
+
+    .section-container {
+        padding: var(--section-spacing) 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-spacing: 4rem;
+    }
+
+    .section-container {
+        padding: var(--section-spacing) 1.25rem;
+    }
+}
+
 /* Typography Refinement */
 h1, h2, h3, h4 {
     font-weight: 800;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
 }
 

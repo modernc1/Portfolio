@@ -117,47 +117,37 @@
 @media (max-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 }
 
-@media (max-width: 992px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+@media (max-width: 768px) {
+    .lead-text {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
     }
 
-    .about-card {
-        padding: 3rem 1.5rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .about-section {
-        padding: 4rem 1rem;
-    }
-
-    .about-card {
-        padding: 2.5rem 1.5rem;
-        border-radius: 1.5rem;
-    }
-
-    .about-text p {
+    .bio-details p {
         font-size: 1rem;
-        line-height: 1.6;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .cap-stats {
+        gap: 2rem;
+        justify-content: flex-start;
     }
 
-    .stat-item {
+    .stat-value {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .capability-card {
         padding: 1.5rem;
     }
 
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
+    .cap-stats {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
