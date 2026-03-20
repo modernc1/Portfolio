@@ -65,7 +65,6 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -111,6 +110,7 @@
         top: calc(100% + 1rem);
         right: 0;
         left: 0;
+        height: fit-content;
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -154,6 +154,26 @@
 
     .logo a {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-header {
+        top: 0.75rem;
+        width: 90%;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.875rem;
+    }
+
+    .logo a {
+        font-size: 0.95rem;
+    }
+
+    .burger {
+        width: 28px;
+        height: 28px;
     }
 }
 

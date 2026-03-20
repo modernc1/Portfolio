@@ -1,29 +1,29 @@
-footer {
-    background-color: var(--slate-900);
-    color: white;
+.footer-section {
+    background-color: #0f172a; /* Solid dark blue slate */
+    color: #f8fafc;
     padding: 6rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-footer .container {
+.footer-section .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-footer p {
-    color: var(--slate-400);
-    font-size: 1.1rem;
+.footer-section p {
+    color: #94a3b8;
+    font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 2rem;
 }
 
-footer .logo {
+.footer-section .logo {
     font-size: 2rem;
     font-weight: 900;
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #6366f1, #0ea5e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2.5rem;
@@ -39,17 +39,17 @@ footer .logo {
 }
 
 .footer-nav a {
-    color: var(--slate-300);
+    color: #cbd5e1;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: white;
+    color: #ffffff;
 }
 
-footer .divider {
+.footer-section .divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
     margin: 4rem 0;

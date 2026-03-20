@@ -20,7 +20,7 @@
               <div class="card-content">
                   <h3>{{project.title}}</h3>
                   <div class="card-footer">
-                    <a [routerLink]="'projects/' + project.title.replaceAll(' ', '-')" fragment="Details" class="btn-link">View Details <i class="bi bi-arrow-right"></i></a>
+n                    <a [routerLink]="['/projects', project.title.replaceAll(' ', '-').toLowerCase()]" class="btn-link">View Details <i class="bi bi-arrow-right"></i></a>
                     <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="btn-icon" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
                   </div>
               </div>

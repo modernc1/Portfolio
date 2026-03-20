@@ -8,6 +8,7 @@ export interface Project {
   description?: string;
   technologies?: string[];
   liveUrl?: string;
+  repoUrl?: string;
   // Case Study Additions
   challenge?: string;
   solution?: string;
@@ -15,4 +16,5 @@ export interface Project {
   duration?: string;
   category?: 'Web Applications' | 'Mobile Applications';
   marketingTagline?: string; // Cinematic Showtime: Marketing "Marketing Beat" tagline
+  additionalSections?: { title: string; description: string }[];
 }

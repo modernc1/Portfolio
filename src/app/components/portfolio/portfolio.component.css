@@ -189,13 +189,38 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .portfolio-item,
-    .portfolio-item:nth-child(3n+1),
-    .portfolio-item:nth-child(3n+2),
-    .portfolio-item:nth-child(3n+3) {
-        grid-column: span 6;
-        aspect-ratio: 16 / 10;
+@media (max-width: 380px) {
+    .filter-container {
+        gap: 0.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-container button {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+        letter-spacing: 0;
+    }
+
+    .portfolio-grid {
+        gap: 1rem;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .btn-link {
+        font-size: 0.75rem;
+    }
+
+    .btn-icon {
+        width: 28px;
+        height: 28px;
     }
 }
 

@@ -1,0 +1,73 @@
+<!-- Senior Developer Case Study Layout -->
+<section class="case-study" *ngIf="project() as p">
+  <div class="case-study-header">
+      <div class="section-container">
+          <h1 class="text-gradient">{{ p.title }}</h1>
+          <div class="project-meta">
+              <div class="meta-item">
+                  <span class="meta-label">Role</span>
+                  <span class="meta-value">{{ p.role || 'Full Stack Developer' }}</span>
+              </div>
+              <div class="meta-item">
+                  <span class="meta-label">Duration</span>
+                  <span class="meta-value">{{ p.duration || 'Flexible' }}</span>
+              </div>
+              <div class="meta-item" *ngIf="p.technologies">
+                  <span class="meta-label">Stack</span>
+                  <div class="meta-tags">
+                      <span *ngFor="let tech of p.technologies" class="tech-tag">{{tech}}</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="header-actions" *ngIf="p.liveUrl || p.repoUrl">
+              <a *ngIf="p.liveUrl" [href]="p.liveUrl" target="_blank" class="btn primary-btn">
+                  <i class="bi bi-box-arrow-up-right"></i> View Demo
+              </a>
+              <a *ngIf="p.repoUrl" [href]="p.repoUrl" target="_blank" class="btn secondary-btn">
+                  <i class="bi bi-github"></i> Repository
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <div class="section-container">
+      <div class="gallery-showcase" *ngIf="p.gallery && p.gallery.length > 0">
+          <app-project-gallery [images]="p.gallery"></app-project-gallery>
+      </div>
+
+      <div class="case-study-grid">
+          <div class="content-block" *ngIf="p.challenge">
+              <h2 class="text-gradient">The Challenge</h2>
+              <p>{{ p.challenge }}</p>
+          </div>
+
+          <div class="content-block" *ngIf="p.solution">
+              <h2 class="text-gradient">The Solution</h2>
+              <p>{{ p.solution }}</p>
+          </div>
+      </div>
+
+       <div class="additional-sections" *ngIf="p.additionalSections">
+          <div class="content-block" *ngFor="let section of p.additionalSections">
+              <h2 class="text-gradient">{{ section.title }}</h2>
+              <div [innerHTML]="section.description"></div>
+          </div>
+       </div>
+
+      <div class="action-footer" *ngIf="p.liveUrl">
+          <h3>Ready to see the result?</h3>
+          <a [href]="p.liveUrl" target="_blank" class="btn primary-btn">
+              Explore Live Project <i class="bi bi-arrow-right"></i>
+          </a>
+      </div>
+  </div>
+</section>
+
+<section *ngIf="!project()" class="not-found-section">
+    <div class="section-container">
+        <h1>Project Not Found</h1>
+        <p>Sorry, the project you're looking for doesn't exist.</p>
+        <a routerLink="/" class="btn primary-btn">Return Home</a>
+    </div>
+</section>
