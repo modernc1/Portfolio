@@ -32,28 +32,38 @@
   </div>
 
   <div class="section-container">
+
       <div class="gallery-showcase" *ngIf="p.gallery && p.gallery.length > 0">
           <app-project-gallery [images]="p.gallery"></app-project-gallery>
       </div>
 
-      <div class="case-study-grid">
+      <!-- Redesigned Description Block for ResumeAI -->
+      <div *ngIf="p.title === 'ResumeAI Builder & Analyzer' && p.description" class="project-description-block">
+        <div class="desc-header">
+          <i class="bi bi-stars desc-icon"></i>
+          <h2 class="desc-title text-gradient">About ResumeAI</h2>
+        </div>
+        <div class="desc-body" [innerHTML]="p.description"></div>
+      </div>
+
+      <!-- Standard Challenge/Solution Layout for other projects -->
+      <div class="case-study-grid" *ngIf="p.title !== 'ResumeAI Builder & Analyzer'">
           <div class="content-block" *ngIf="p.challenge">
               <h2 class="text-gradient">The Challenge</h2>
               <p>{{ p.challenge }}</p>
           </div>
-
           <div class="content-block" *ngIf="p.solution">
               <h2 class="text-gradient">The Solution</h2>
               <p>{{ p.solution }}</p>
           </div>
       </div>
 
-       <div class="additional-sections" *ngIf="p.additionalSections">
-          <div class="content-block" *ngFor="let section of p.additionalSections">
-              <h2 class="text-gradient">{{ section.title }}</h2>
-              <div [innerHTML]="section.description"></div>
-          </div>
-       </div>
+      <div class="additional-sections" *ngIf="p.additionalSections">
+        <div class="content-block" *ngFor="let section of p.additionalSections">
+          <h2 class="text-gradient">{{ section.title }}</h2>
+          <div [innerHTML]="section.description"></div>
+        </div>
+      </div>
 
       <div class="action-footer" *ngIf="p.liveUrl">
           <h3>Ready to see the result?</h3>

@@ -70,7 +70,27 @@ export class ProjectService {
       ],
       technologies: ['Flutter', 'AI Integration', 'File Processing', 'PDF Generation', 'Modern UI'],
       category: 'Mobile Applications',
-      marketingTagline: 'AI-Powered Precision for Career Success'
+      marketingTagline: 'AI-Powered Precision for Career Success',
+      description: `
+<strong>Resume AI Builder: CV Maker</strong> is an AI-powered resume refactoring and PDF generation app. It helps users analyze, build, update, and optimize their resumes using AI, with ATS-optimized templates and instant PDF export.<br><br>
+<strong>Core Features:</strong><ul>
+<li><strong>AI Resume Analysis:</strong> Upload a resume (PDF) and receive a refactored resume with actionable suggestions & explanation for improvement.</li>
+<li><strong>Smart Resume Builder:</strong> Section-by-section editor for personal info, work experience, education, skills, projects, and more.</li>
+<li><strong>Completely Reordered Resume sections & subsections:</strong> Reorder main sections like projects, education, skills and sub-sections like re-ordering projects.</li>
+<li><strong>ATS-Optimized Templates:</strong> 15+ professional templates designed to pass Applicant Tracking Systems.</li>
+<li><strong>AI Career Chatbot:</strong> Chat with AI for personalized career advice, bullet point brainstorming, and resume writing help.</li>
+<li><strong>Multi-language Support:</strong> Generate resumes in English, German, French, and more.</li>
+<li><strong>Instant PDF Export:</strong> Download a print-ready, professional PDF instantly.</li>
+<li><strong>Credit & Subscription Model:</strong> Hybrid monetization—users can buy credits or get unlimited access.</li>
+</ul>
+<strong>Target Audience:</strong> Job seekers, professionals, students, and global users needing resumes in multiple languages and formats.<br><br>
+<strong>Unique Selling Points:</strong> AI-driven actionable feedback, ATS compatibility, integrated AI chat, fast and intuitive experience.<br><br>
+<strong>Monetization:</strong> In-app purchases for credits, subscription for unlimited access (ResumeAI Pro).<br><br>
+<strong>Links:</strong><br>
+<a href="https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884" target="_blank">App Store</a> | <a href="https://play.google.com/store/apps/details?id=com.resumeaianalyzer.app" target="_blank">Google Play</a><br>
+Contact: <a href="mailto:resumeaibsupport@gmail.com">resumeaibsupport@gmail.com</a> | <a href="https://www.facebook.com/profile.php?id=61568004440867" target="_blank">Facebook</a>
+`,
+      liveUrl: 'https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884',
     },
     {
       id: 2,

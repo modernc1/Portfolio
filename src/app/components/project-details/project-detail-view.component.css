@@ -1,3 +1,57 @@
+.project-description-block {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px -2px rgba(0,0,0,0.04);
+  padding: 3rem 2.5rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desc-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.desc-icon {
+  font-size: 2.2rem;
+  color: var(--primary);
+  filter: drop-shadow(0 2px 8px rgba(99,102,241,0.15));
+}
+
+.desc-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.desc-body {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.desc-body ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+  list-style: disc inside;
+}
+
+.desc-body li {
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+}
+
+.desc-body a {
+  color: var(--primary);
+  text-decoration: underline;
+  word-break: break-all;
+}
 .case-study {
   background-color: var(--surface-1);
   min-height: 100vh;
