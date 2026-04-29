@@ -37,26 +37,26 @@
           <app-project-gallery [images]="p.gallery"></app-project-gallery>
       </div>
 
-      <!-- Redesigned Description Block for ResumeAI -->
-      <div *ngIf="p.title === 'ResumeAI Builder & Analyzer' && p.description" class="project-description-block">
-        <div class="desc-header">
-          <i class="bi bi-stars desc-icon"></i>
-          <h2 class="desc-title text-gradient">About ResumeAI</h2>
-        </div>
-        <div class="desc-body" [innerHTML]="p.description"></div>
-      </div>
+            <!-- Styled Description Block for any project with a description -->
+            <div *ngIf="p.description" class="project-description-block">
+                <div class="desc-header">
+                    <i class="bi bi-stars desc-icon"></i>
+                    <h2 class="desc-title text-gradient">About {{ p.title }}</h2>
+                </div>
+                <div class="desc-body" [innerHTML]="p.description"></div>
+            </div>
 
-      <!-- Standard Challenge/Solution Layout for other projects -->
-      <div class="case-study-grid" *ngIf="p.title !== 'ResumeAI Builder & Analyzer'">
-          <div class="content-block" *ngIf="p.challenge">
-              <h2 class="text-gradient">The Challenge</h2>
-              <p>{{ p.challenge }}</p>
-          </div>
-          <div class="content-block" *ngIf="p.solution">
-              <h2 class="text-gradient">The Solution</h2>
-              <p>{{ p.solution }}</p>
-          </div>
-      </div>
+            <!-- Standard Challenge/Solution Layout for projects without a description -->
+            <div class="case-study-grid" *ngIf="!p.description">
+                    <div class="content-block" *ngIf="p.challenge">
+                            <h2 class="text-gradient">The Challenge</h2>
+                            <p>{{ p.challenge }}</p>
+                    </div>
+                    <div class="content-block" *ngIf="p.solution">
+                            <h2 class="text-gradient">The Solution</h2>
+                            <p>{{ p.solution }}</p>
+                    </div>
+            </div>
 
       <div class="additional-sections" *ngIf="p.additionalSections">
         <div class="content-block" *ngFor="let section of p.additionalSections">

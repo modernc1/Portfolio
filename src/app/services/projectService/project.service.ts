@@ -8,6 +8,71 @@ export class ProjectService {
 
   projects = signal<Project[]>([
     {
+      id: 8,
+      title: 'ResumeAI Builder & Analyzer',
+      imageUrl: 'assets/img/resume-ai/1.png',
+      gallery: [
+        'assets/img/resume-ai/1.png',
+        'assets/img/resume-ai/2.png',
+        'assets/img/resume-ai/3.png',
+        'assets/img/resume-ai/4.png',
+        'assets/img/resume-ai/5.png',
+      ],
+      technologies: ['Flutter', 'AI Integration', 'File Processing', 'PDF Generation', 'Modern UI'],
+      category: 'Mobile Applications',
+      marketingTagline: 'AI-Powered Precision for Career Success',
+      description: `
+<strong>Resume AI Builder: CV Maker</strong> is an AI-powered resume refactoring and PDF generation app. It helps users analyze, build, update, and optimize their resumes using AI, with ATS-optimized templates and instant PDF export.<br><br>
+<strong>Core Features:</strong><ul>
+<li><strong>AI Resume Analysis:</strong> Upload a resume (PDF) and receive a refactored resume with actionable suggestions & explanation for improvement.</li>
+<li><strong>Smart Resume Builder:</strong> Section-by-section editor for personal info, work experience, education, skills, projects, and more.</li>
+<li><strong>Completely Reordered Resume sections & subsections:</strong> Reorder main sections like projects, education, skills and sub-sections like re-ordering projects.</li>
+<li><strong>ATS-Optimized Templates:</strong> 15+ professional templates designed to pass Applicant Tracking Systems.</li>
+<li><strong>AI Career Chatbot:</strong> Chat with AI for personalized career advice, bullet point brainstorming, and resume writing help.</li>
+<li><strong>Multi-language Support:</strong> Generate resumes in English, German, French, and more.</li>
+<li><strong>Instant PDF Export:</strong> Download a print-ready, professional PDF instantly.</li>
+<li><strong>Credit & Subscription Model:</strong> Hybrid monetization—users can buy credits or get unlimited access.</li>
+</ul>
+<strong>Target Audience:</strong> Job seekers, professionals, students, and global users needing resumes in multiple languages and formats.<br><br>
+<strong>Unique Selling Points:</strong> AI-driven actionable feedback, ATS compatibility, integrated AI chat, fast and intuitive experience.<br><br>
+<strong>Monetization:</strong> In-app purchases for credits, subscription for unlimited access (ResumeAI Pro).<br><br>
+<strong>Links:</strong><br>
+<a href="https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884" target="_blank">App Store</a> | <a href="https://play.google.com/store/apps/details?id=com.resumeaianalyzer.app" target="_blank">Google Play</a><br>
+Contact: <a href="mailto:resumeaibsupport@gmail.com">resumeaibsupport@gmail.com</a> | <a href="https://www.facebook.com/profile.php?id=61568004440867" target="_blank">Facebook</a>
+`,
+      liveUrl: 'https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884',
+    },
+    {
+      id: 2,
+      title: 'TimetablesPro Teacher App',
+      imageUrl: 'assets/img/timetables-pro/main.png',
+      gallery: [
+        'assets/img/timetables-pro/main.png',
+        'assets/img/timetables-pro/generated-image-78f2d2f6-cc72-4516-9ce0-c7112f086fdb.png',
+        'assets/img/timetables-pro/generated-image-de266818-d893-4075-9f63-b552ce7aa1ad.png',
+      ],
+      technologies: ['Flutter', 'Firebase messaging', 'Cross-Platform', 'State Management', 'Mobile UX'],
+      category: 'Mobile Applications',
+      liveUrl: 'https://play.google.com/store/apps/details?id=com.timetablespro.teacher_app',
+      marketingTagline: 'Master Your Schedule with Professional Precision',
+      description: `
+<strong>TimetablesPro Teacher App</strong> is a Flutter application designed for teachers whose schools are subscribed to <a href="https://timetablespro.net" target="_blank">TimetablesPro.net</a>, a SaaS platform for automated school timetable generation and teacher management.<br><br>
+<strong>Overview:</strong> The app allows teachers to securely log in and access their personalized schedules, notifications, and daily tasks. It connects directly to the TimetablesPro SaaS backend, providing real-time updates and management features for teachers.<br><br>
+<strong>Key Features:</strong><ul>
+  <li><strong>Secure Login:</strong> Teachers authenticate using credentials provided by their school.</li>
+  <li><strong>Personalized Timetable:</strong> View daily and weekly schedules, including classes, periods, and coverage assignments.</li>
+  <li><strong>Notifications:</strong> Receive important announcements and push notifications from the school administration.</li>
+  <li><strong>Daily Tasks:</strong> Access and manage daily teaching tasks and responsibilities.</li>
+  <li><strong>Multi-language Support:</strong> The app supports multiple languages for a localized experience.</li>
+  <li><strong>Offline Handling:</strong> Graceful handling of network connectivity issues, with caching for critical data.</li>
+  <li><strong>Device Registration:</strong> Secure device registration for push notifications and enhanced security.</li>
+</ul>
+<strong>Intended Users:</strong> Teachers in schools that are subscribed to TimetablesPro.net, and school administrators managing teacher schedules and communications.<br><br>
+<strong>Links:</strong> <a href="https://play.google.com/store/apps/details?id=com.timetablespro.teacher_app" target="_blank">TimetablesPro.net</a><br>
+Contact: <a href="mailto:support@timetablespro.net">support@timetablespro.net</a>
+`,
+    },
+    {
       id: 9,
       title: 'Luxe Perfume High-End E-commerce Template',
       imageUrl: 'assets/img/luxe-perfume/main.jpeg',
@@ -57,54 +122,7 @@ export class ProjectService {
       category: 'Web Applications',
       marketingTagline: 'Responsive E-Commerce Architecture Redigitized'
     },
-    {
-      id: 8,
-      title: 'ResumeAI Builder & Analyzer',
-      imageUrl: 'assets/img/resume-ai/1.png',
-      gallery: [
-        'assets/img/resume-ai/1.png',
-        'assets/img/resume-ai/2.png',
-        'assets/img/resume-ai/3.png',
-        'assets/img/resume-ai/4.png',
-        'assets/img/resume-ai/5.png',
-      ],
-      technologies: ['Flutter', 'AI Integration', 'File Processing', 'PDF Generation', 'Modern UI'],
-      category: 'Mobile Applications',
-      marketingTagline: 'AI-Powered Precision for Career Success',
-      description: `
-<strong>Resume AI Builder: CV Maker</strong> is an AI-powered resume refactoring and PDF generation app. It helps users analyze, build, update, and optimize their resumes using AI, with ATS-optimized templates and instant PDF export.<br><br>
-<strong>Core Features:</strong><ul>
-<li><strong>AI Resume Analysis:</strong> Upload a resume (PDF) and receive a refactored resume with actionable suggestions & explanation for improvement.</li>
-<li><strong>Smart Resume Builder:</strong> Section-by-section editor for personal info, work experience, education, skills, projects, and more.</li>
-<li><strong>Completely Reordered Resume sections & subsections:</strong> Reorder main sections like projects, education, skills and sub-sections like re-ordering projects.</li>
-<li><strong>ATS-Optimized Templates:</strong> 15+ professional templates designed to pass Applicant Tracking Systems.</li>
-<li><strong>AI Career Chatbot:</strong> Chat with AI for personalized career advice, bullet point brainstorming, and resume writing help.</li>
-<li><strong>Multi-language Support:</strong> Generate resumes in English, German, French, and more.</li>
-<li><strong>Instant PDF Export:</strong> Download a print-ready, professional PDF instantly.</li>
-<li><strong>Credit & Subscription Model:</strong> Hybrid monetization—users can buy credits or get unlimited access.</li>
-</ul>
-<strong>Target Audience:</strong> Job seekers, professionals, students, and global users needing resumes in multiple languages and formats.<br><br>
-<strong>Unique Selling Points:</strong> AI-driven actionable feedback, ATS compatibility, integrated AI chat, fast and intuitive experience.<br><br>
-<strong>Monetization:</strong> In-app purchases for credits, subscription for unlimited access (ResumeAI Pro).<br><br>
-<strong>Links:</strong><br>
-<a href="https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884" target="_blank">App Store</a> | <a href="https://play.google.com/store/apps/details?id=com.resumeaianalyzer.app" target="_blank">Google Play</a><br>
-Contact: <a href="mailto:resumeaibsupport@gmail.com">resumeaibsupport@gmail.com</a> | <a href="https://www.facebook.com/profile.php?id=61568004440867" target="_blank">Facebook</a>
-`,
-      liveUrl: 'https://apps.apple.com/eg/app/resume-ai-builder-cv-maker/id6758414884',
-    },
-    {
-      id: 2,
-      title: 'Timetables Pro Mobile Application',
-      imageUrl: 'assets/img/timetables-pro/main.png',
-      gallery: [
-        'assets/img/timetables-pro/main.png',
-        'assets/img/timetables-pro/generated-image-78f2d2f6-cc72-4516-9ce0-c7112f086fdb.png',
-        'assets/img/timetables-pro/generated-image-de266818-d893-4075-9f63-b552ce7aa1ad.png',
-      ],
-      technologies: ['Flutter', 'Firebase messaging', 'Cross-Platform', 'State Management', 'Mobile UX'],
-      category: 'Mobile Applications',
-      marketingTagline: 'Master Your Schedule with Professional Precision'
-    },
+    
     {
       id: 3,
       title: 'Responsive Real Estate Web Application',
