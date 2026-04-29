@@ -174,7 +174,7 @@ Contact: <a href="mailto:support@timetablespro.net">support@timetablespro.net</a
       marketingTagline: 'Empowering Health through Digital Knowledge'
     },
     {
-      id: 7,
+      id: 7 ,
       title: 'Car Rental Landing Page',
       imageUrl: 'assets/img/cars/Car_site_main_img.jpeg',
       gallery: [
